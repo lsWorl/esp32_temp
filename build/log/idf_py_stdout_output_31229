@@ -1,0 +1,2122 @@
+ets Jun  8 2016 00:22:57
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7172
+load:0x40078000,len:15532
+load:0x40080400,len:4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (29) boot: ESP-IDF v5.2 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Jan 23 2025 03:09:07[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (33) boot: chip revision: v1.1[0m
+[0;32mI (37) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (41) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (46) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (50) boot: Enabling RNG early entropy source...[0m
+[0;32mI (56) boot: Partition Table:[0m
+[0;32mI (59) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (67) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (74) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (82) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (89) boot: End of partition table[0m
+[0;32mI (93) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=235d4h (144852) map[0m
+[0;32mI (151) esp_image: segment 1: paddr=000335fc vaddr=3ffb0000 size=03bech ( 15340) load[0m
+[0;32mI (157) esp_image: segment 2: paddr=000371f0 vaddr=40080000 size=08e28h ( 36392) load[0m
+[0;32mI (172) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=852c0h (545472) map[0m
+[0;32mI (359) esp_image: segment 4: paddr=000c52e8 vaddr=40088e28 size=0e790h ( 59280) load[0m
+[0;32mI (394) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (394) boot: Disabling RNG early entropy source...[0m
+[0;32mI (406) cpu_start: Multicore app[0m
+[0;32mI (414) cpu_start: Pro cpu start user code[0m
+[0;32mI (415) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (415) cpu_start: Application information:[0m
+[0;32mI (418) cpu_start: Project name:     test[0m
+[0;32mI (422) cpu_start: App version:      1[0m
+[0;32mI (427) cpu_start: Compile time:     Jan 23 2025 03:09:00[0m
+[0;32mI (433) cpu_start: ELF file SHA256:  5d7a4132e...[0m
+[0;32mI (438) cpu_start: ESP-IDF:          v5.2[0m
+[0;32mI (443) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (448) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (452) cpu_start: Chip rev:         v1.1[0m
+[0;32mI (457) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (464) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (470) heap_init: At 3FFB7D00 len 00028300 (160 KiB): DRAM[0m
+[0;32mI (477) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (483) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (489) heap_init: At 400975B8 len 00008A48 (34 KiB): IRAM[0m
+[0;32mI (497) spi_flash: detected chip: generic[0m
+[0;32mI (500) spi_flash: flash io: dio[0m
+[0;33mW (504) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (518) main_task: Started on CPU0[0m
+[0;32mI (528) main_task: Calling app_main()[0m
+[0;32mI (568) wifi:wifi driver task: 3ffbfc78, prio:23, stack:6656, core=0[0m
+[0;32mI (578) wifi:wifi firmware version: cc1dd81[0m
+[0;32mI (578) wifi:wifi certification version: v7.0[0m
+[0;32mI (588) wifi:config NVS flash: enabled[0m
+[0;32mI (588) wifi:config nano formating: disabled[0m
+[0;32mI (588) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (588) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (598) wifi:Init management short buffer num: 32[0m
+[0;32mI (598) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (608) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (608) wifi:Init static rx buffer num: 10[0m
+[0;32mI (608) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (618) wifi_init: rx ba win: 6[0m
+[0;32mI (618) wifi_init: tcpip mbox: 32[0m
+[0;32mI (628) wifi_init: udp mbox: 6[0m
+[0;32mI (628) wifi_init: tcp mbox: 6[0m
+[0;32mI (628) wifi_init: tcp tx win: 5760[0m
+[0;32mI (638) wifi_init: tcp rx win: 5760[0m
+[0;32mI (638) wifi_init: tcp mss: 1440[0m
+[0;32mI (648) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (648) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (658) phy_init: phy_version 4791,2c4672b,Dec 20 2023,16:06:06[0m
+[0;32mI (738) wifi:mode : sta (f8:b3:b7:7f:23:38)[0m
+[0;32mI (738) wifi:enable tsf[0m
+[0;32mI (738) TCP_SERVER: Connecting to Wifi...[0m
+[1;31mE (748) wifi:sta is connecting, return error[0m
+[0;32mI (758) wifi:new:<1,0>, old:<1,0>, ap:<255,255>, sta:<1,0>, prof:1[0m
+[0;32mI (758) wifi:state: init -> auth (b0)[0m
+[0;32mI (768) wifi:state: auth -> init (1c0)[0m
+[0;32mI (768) wifi:new:<1,0>, old:<1,0>, ap:<255,255>, sta:<1,0>, prof:1[0m
+[0;32mI (1748) TCP_SERVER: Connected to WiFi[0m
+[0;32mI (1748) TCP_SERVER: IP Address: 0.0.0.0[0m
+[0;32mI (1748) TCP_SERVER: TCP server started, listening on port 80[0m
+[0;32mI (2248) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (3348) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (4448) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (5548) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (6648) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (7748) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (8848) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (9948) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (11048) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (12248) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (13348) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (14448) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (15548) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (16648) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (17748) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (18848) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (19948) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (21048) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (22148) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (23248) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (24348) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (25448) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (26548) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (27648) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (28748) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (29848) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (30948) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (32048) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (33148) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (34248) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (35348) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (36448) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (37548) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (38648) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (39748) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (40848) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (41948) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (43048) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (44148) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (45248) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (46348) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (47448) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (48548) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (49748) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (50848) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (51948) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (53048) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (54148) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (55248) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (56348) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (57448) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (58548) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (59648) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (60748) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (61848) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (62948) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (64048) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (65148) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (66248) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (67348) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (68448) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (69548) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (70648) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (71748) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (72848) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (73948) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (75048) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (76148) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (77248) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (78348) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (79448) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (80548) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (81648) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (82748) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (83848) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (84948) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (86148) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (87248) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (88348) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (89448) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (90548) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (91648) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (92748) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (93848) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (94948) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (96048) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (97148) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (98248) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (99348) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (100448) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (101548) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (102648) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (103748) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (104848) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (105948) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (107048) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (108148) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (109248) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (110348) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (111448) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (112548) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (113648) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (114748) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (115848) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (116948) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (118048) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (119148) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (120248) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (121348) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (122548) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (123648) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (124748) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (125848) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (126948) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (128048) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (129148) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (130248) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (131348) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (132448) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (133548) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (134648) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (135748) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (136848) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (137948) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (139048) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (140148) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (141248) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (142348) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (143448) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (144548) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (145648) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (146748) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (147848) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (148948) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (150048) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (151148) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (152248) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (153348) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (154448) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (155548) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (156648) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (157748) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (158848) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (160048) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (161148) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (162248) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (163348) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (164448) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (165548) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (166648) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (167748) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (168848) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (169948) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (171048) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (172148) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (173248) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (174348) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (175448) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (176548) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (177648) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (178748) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (179848) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (180948) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (182048) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (183148) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (184248) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (185348) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (186448) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (187548) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (188648) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (189748) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (190848) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (191948) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (193048) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (194148) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (195248) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (196448) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (197548) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (198648) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (199748) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (200848) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (201948) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (203048) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (204148) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (205248) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (206348) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (207448) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (208548) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (209648) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (210748) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (211848) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (212948) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (214048) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (215148) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (216248) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (217348) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (218448) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (219548) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (220648) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (221748) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (222848) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (223948) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (225048) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (226148) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (227248) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (228348) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (229448) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (230548) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (231648) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (232848) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (233948) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (235048) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (236148) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (237248) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (238348) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (239448) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (240548) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (241648) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (242748) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (243848) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (244948) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (246048) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (247148) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (248248) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (249348) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (250448) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (251548) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (252648) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (253748) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (254848) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (255948) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (257048) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (258148) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (259248) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (260348) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (261448) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (262548) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (263648) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (264748) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (265848) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (266948) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (268048) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (269148) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (270348) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (271448) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (272548) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (273648) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (274748) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (275848) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (276948) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (278048) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (279148) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (280248) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (281348) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (282448) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (283548) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (284648) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (285748) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (286848) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (287948) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (289048) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (290148) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (291248) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (292348) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (293448) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (294548) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (295648) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (296748) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (297848) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (298948) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (300048) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (301148) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (302248) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (303348) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (304448) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (305548) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (306748) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (307848) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (308948) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (310048) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (311148) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (312248) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (313348) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (314448) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (315548) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (316648) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (317748) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (318848) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (319948) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (321048) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (322148) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (323248) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (324348) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (325448) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (326548) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (327648) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (328748) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (329848) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (330948) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (332048) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (333148) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (334248) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (335348) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (336448) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (337548) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (338648) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (339748) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (340848) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (341948) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (343148) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (344248) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (345348) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (346448) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (347548) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (348648) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (349748) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (350848) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (351948) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (353048) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (354148) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (355248) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (356348) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (357448) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (358548) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (359648) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (360748) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (361848) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (362948) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (364048) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (365148) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (366248) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (367348) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (368448) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (369548) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (370648) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (371748) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (372848) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (373948) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (375048) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (376148) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (377248) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (378348) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (379448) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (380648) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (381748) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (382848) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (383948) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (385048) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (386148) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (387248) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (388348) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (389448) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (390548) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (391648) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (392748) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (393848) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (394948) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (396048) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (397148) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (398248) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (399348) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (400448) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (401548) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (402648) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (403748) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (404848) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (405948) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (407048) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (408148) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (409248) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (410348) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (411448) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (412548) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (413648) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (414748) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (415848) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (417048) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (418148) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (419248) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (420348) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (421448) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (422548) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (423648) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (424748) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (425848) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (426948) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (428048) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (429148) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (430248) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (431348) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (432448) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (433548) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (434648) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (435748) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (436848) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (437948) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (439048) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (440148) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (441248) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (442348) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (443448) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (444548) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (445648) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (446748) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (447848) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (448948) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (450048) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (451148) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (452248) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (453448) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (454548) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (455648) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (456748) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (457848) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (458948) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (460048) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (461148) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (462248) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (463348) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (464448) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (465548) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (466648) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (467748) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (468848) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (469948) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (471048) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (472148) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (473248) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (474348) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (475448) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (476548) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (477648) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (478748) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (479848) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (480948) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (482048) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (483148) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (484248) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (485348) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (486448) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (487548) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (488648) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (489748) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (490948) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (492048) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (493148) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (494248) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (495348) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (496448) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (497548) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (498648) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (499748) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (500848) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (501948) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (503048) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (504148) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (505248) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (506348) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (507448) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (508548) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (509648) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (510748) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (511848) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (512948) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (514048) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (515148) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (516248) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (517348) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (518448) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (519548) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (520648) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (521748) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (522848) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (523948) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (525048) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (526148) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (527348) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (528448) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (529548) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (530648) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (531748) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (532848) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (533948) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (535048) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (536148) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (537248) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (538348) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (539448) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (540548) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (541648) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (542748) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (543848) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (544948) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (546048) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (547148) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (548248) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (549348) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (550448) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (551548) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (552648) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (553748) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (554848) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (555948) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (557048) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (558148) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (559248) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (560348) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (561448) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (562548) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (563748) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (564848) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (565948) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (567048) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (568148) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (569248) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (570348) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (571448) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (572548) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (573648) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (574748) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (575848) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (576948) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (578048) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (579148) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (580248) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (581348) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (582448) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (583548) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (584648) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (585748) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (586848) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (587948) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (589048) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (590148) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (591248) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (592348) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (593448) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (594548) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (595648) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (596748) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (597848) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (598948) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (600048) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (601248) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (602348) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (603448) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (604548) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (605648) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (606748) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (607848) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (608948) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (610048) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (611148) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (612248) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (613348) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (614448) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (615548) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (616648) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (617748) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (618848) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (619948) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (621048) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (622148) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (623248) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (624348) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (625448) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (626548) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (627648) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (628748) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (629848) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (630948) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (632048) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (633148) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (634248) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (635348) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (636448) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (637648) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (638748) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (639848) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (640948) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (642048) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (643148) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (644248) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (645348) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (646448) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (647548) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (648648) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (649748) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (650848) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (651948) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (653048) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (654148) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (655248) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (656348) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (657448) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (658548) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (659648) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (660748) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (661848) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (662948) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (664048) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (665148) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (666248) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (667348) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (668448) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (669548) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (670648) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (671748) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (672848) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (674048) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (675148) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (676248) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (677348) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (678448) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (679548) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (680648) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (681748) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (682848) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (683948) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (685048) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (686148) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (687248) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (688348) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (689448) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (690548) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (691648) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (692748) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (693848) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (694948) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (696048) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (697148) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (698248) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (699348) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (700448) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (701548) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (702648) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (703748) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (704848) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (705948) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (707048) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (708148) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (709248) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (710348) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (711548) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (712648) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (713748) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (714848) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (715948) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (717048) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (718148) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (719248) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (720348) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (721448) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (722548) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (723648) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (724748) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (725848) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (726948) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (728048) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (729148) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (730248) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (731348) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (732448) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (733548) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (734648) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (735748) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (736848) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (737948) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (739048) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (740148) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (741248) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (742348) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (743448) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (744548) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (745648) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (746748) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (747948) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (749048) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (750148) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (751248) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (752348) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (753448) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (754548) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (755648) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (756748) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (757848) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (758948) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (760048) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (761148) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (762248) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (763348) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (764448) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (765548) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (766648) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (767748) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (768848) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (769948) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (771048) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (772148) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (773248) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (774348) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (775448) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (776548) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (777648) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (778748) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (779848) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (780948) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (782048) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (783148) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (784348) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (785448) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (786548) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (787648) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (788748) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (789848) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (790948) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (792048) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (793148) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (794248) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (795348) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (796448) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (797548) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (798648) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (799748) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (800848) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (801948) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (803048) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (804148) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (805248) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (806348) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (807448) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (808548) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (809648) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (810748) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (811848) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (812948) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (814048) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (815148) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (816248) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (817348) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (818448) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (819548) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (820648) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (821848) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (822948) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (824048) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (825148) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (826248) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (827348) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (828448) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (829548) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (830648) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (831748) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (832848) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (833948) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (835048) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (836148) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (837248) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (838348) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (839448) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (840548) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (841648) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (842748) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (843848) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (844948) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (846048) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (847148) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (848248) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (849348) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (850448) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (851548) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (852648) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (853748) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (854848) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (855948) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (857048) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (858248) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (859348) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (860448) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (861548) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (862648) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (863748) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (864848) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (865948) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (867048) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (868148) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (869248) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (870348) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (871448) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (872548) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (873648) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (874748) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (875848) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (876948) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (878048) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (879148) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (880248) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (881348) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (882448) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (883548) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (884648) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (885748) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (886848) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (887948) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (889048) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (890148) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (891248) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (892348) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (893448) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (894648) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (895748) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (896848) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (897948) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (899048) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (900148) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (901248) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (902348) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (903448) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (904548) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (905648) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (906748) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (907848) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (908948) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (910048) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (911148) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (912248) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (913348) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (914448) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (915548) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (916648) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (917748) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (918848) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (919948) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (921048) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (922148) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (923248) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (924348) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (925448) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (926548) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (927648) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (928748) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (929848) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (930948) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (932148) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (933248) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (934348) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (935448) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (936548) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (937648) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (938748) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (939848) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (940948) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (942048) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (943148) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (944248) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (945348) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (946448) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (947548) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (948648) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (949748) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (950848) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (951948) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (953048) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (954148) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (955248) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (956348) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (957448) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (958548) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (959648) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (960748) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (961848) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (962948) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (964048) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (965148) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (966248) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (967348) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (968548) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (969648) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (970748) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (971848) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (972948) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (974048) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (975148) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (976248) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (977348) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (978448) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (979548) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (980648) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (981748) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (982848) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (983948) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (985048) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (986148) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (987248) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (988348) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (989448) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (990548) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (991648) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (992748) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (993848) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (994948) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (996048) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (997148) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (998248) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (999348) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (1000448) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (1001548) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (1002648) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (1003748) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (1004948) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (1006048) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (1007148) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (1008248) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (1009348) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (1010448) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (1011548) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (1012648) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (1013748) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (1014848) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (1015948) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (1017048) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (1018148) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (1019248) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (1020348) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (1021448) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (1022548) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (1023648) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (1024748) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (1025848) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (1026948) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (1028048) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (1029148) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (1030248) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (1031348) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (1032448) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (1033548) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (1034648) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (1035748) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (1036848) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (1037948) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (1039048) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (1040148) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (1041248) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (1042448) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (1043548) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (1044648) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (1045748) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (1046848) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (1047948) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (1049048) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (1050148) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (1051248) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (1052348) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (1053448) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (1054548) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (1055648) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (1056748) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (1057848) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (1058948) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (1060048) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (1061148) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (1062248) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (1063348) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (1064448) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (1065548) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (1066648) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (1067748) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (1068848) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (1069948) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (1071048) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (1072148) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (1073248) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (1074348) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (1075448) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (1076548) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (1077648) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (1078848) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (1079948) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (1081048) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (1082148) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (1083248) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (1084348) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (1085448) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (1086548) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (1087648) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (1088748) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (1089848) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (1090948) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (1092048) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (1093148) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (1094248) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (1095348) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (1096448) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (1097548) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (1098648) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (1099748) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (1100048) uart_Test: Received 2 bytes: [0m
+[0;32mI (1100148) uart_Test: Received 8 bytes: [0m
+[0;32mI (1100248) uart_Test: Received 10 bytes: [0m
+[0;32mI (1100348) uart_Test: Received 10 bytes: [0m
+[0;32mI (1100448) uart_Test: Received 10 bytes: [0m
+[0;32mI (1100548) uart_Test: Received 13 bytes: [0m
+[0;32mI (1100648) uart_Test: Received 14 bytes: [0m
+[0;32mI (1100748) uart_Test: Received 10 bytes: [0m
+[0;32mI (1100848) uart_Test: Received 13 bytes: [0m
+[0;32mI (1100948) uart_Test: Received 9 bytes: [0m
+[0;32mI (1101048) uart_Test: Received 11 bytes: [0m
+[0;32mI (1101148) uart_Test: Received 11 bytes: [0m
+[0;32mI (1101248) uart_Test: Received 12 bytes: [0m
+[0;32mI (1101348) uart_Test: Received 9 bytes: [0m
+[0;32mI (1101448) uart_Test: Received 7 bytes: [0m
+[0;32mI (1101648) uart_Test: Received 1 bytes: [0m
+[0;32mI (1101748) uart_Test: Received 10 bytes: [0m
+[0;32mI (1101848) uart_Test: Received 10 bytes: [0m
+[0;32mI (1101948) uart_Test: Received 9 bytes: [0m
+[0;32mI (1102048) uart_Test: Received 9 bytes: [0m
+[0;32mI (1102148) uart_Test: Received 11 bytes: [0m
+[0;32mI (1102248) uart_Test: Received 10 bytes: �
+[0;32mI (1102348) uart_Test: Received 11 bytes: ��[0m
+[0;32mI (1102448) uart_Test: Received 9 bytes: [0m
+[0;32mI (1102548) uart_Test: Received 2 bytes: [0m
+[0;32mI (1102648) uart_Test: Received 9 bytes: [0m
+[0;32mI (1102748) uart_Test: Received 11 bytes: [0m
+[0;32mI (1102848) uart_Test: Received 10 bytes: [0m
+[0;32mI (1102948) uart_Test: Received 2 bytes: [0m
+[0;32mI (1103048) uart_Test: Received 14 bytes: [0m
+[0;32mI (1103148) uart_Test: Received 10 bytes: [0m
+[0;32mI (1103248) uart_Test: Received 8 bytes: [0m
+[0;32mI (1103348) uart_Test: Received 10 bytes: [0m
+[0;32mI (1103448) uart_Test: Received 10 bytes: [0m
+[0;32mI (1103548) uart_Test: Received 10 bytes: [0m
+[0;32mI (1103648) uart_Test: Received 10 bytes: [0m
+[0;32mI (1103748) uart_Test: Received 10 bytes: [0m
+[0;32mI (1103848) uart_Test: Received 10 bytes: [0m
+[0;32mI (1103948) uart_Test: Received 10 bytes: [0m
+[0;32mI (1104048) uart_Test: Received 10 bytes: [0m
+[0;32mI (1104148) uart_Test: Received 10 bytes: [0m
+[0;32mI (1104248) uart_Test: Received 10 bytes: [0m

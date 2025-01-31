@@ -1,0 +1,3697 @@
+ets Jun  8 2016 00:22:57
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7172
+load:0x40078000,len:15532
+load:0x40080400,len:4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (29) boot: ESP-IDF v5.2 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Jan 23 2025 03:09:07[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (33) boot: chip revision: v1.1[0m
+[0;32mI (37) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (42) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (46) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (51) boot: Enabling RNG early entropy source...[0m
+[0;32mI (56) boot: Partition Table:[0m
+[0;32mI (60) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (67) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (74) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (82) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (89) boot: End of partition table[0m
+[0;32mI (94) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=235d4h (144852) map[0m
+[0;32mI (152) esp_image: segment 1: paddr=000335fc vaddr=3ffb0000 size=03bech ( 15340) load[0m
+[0;32mI (158) esp_image: segment 2: paddr=000371f0 vaddr=40080000 size=08e28h ( 36392) load[0m
+[0;32mI (172) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=852c0h (545472) map[0m
+[0;32mI (359) esp_image: segment 4: paddr=000c52e8 vaddr=40088e28 size=0e790h ( 59280) load[0m
+[0;32mI (394) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (394) boot: Disabling RNG early entropy source...[0m
+[0;32mI (406) cpu_start: Multicore app[0m
+[0;32mI (415) cpu_start: Pro cpu start user code[0m
+[0;32mI (415) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (415) cpu_start: Application information:[0m
+[0;32mI (418) cpu_start: Project name:     test[0m
+[0;32mI (422) cpu_start: App version:      1[0m
+[0;32mI (427) cpu_start: Compile time:     Jan 23 2025 03:09:00[0m
+[0;32mI (433) cpu_start: ELF file SHA256:  5d7a4132e...[0m
+[0;32mI (438) cpu_start: ESP-IDF:          v5.2[0m
+[0;32mI (443) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (448) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (453) cpu_start: Chip rev:         v1.1[0m
+[0;32mI (458) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (465) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (471) heap_init: At 3FFB7D00 len 00028300 (160 KiB): DRAM[0m
+[0;32mI (477) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (483) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (490) heap_init: At 400975B8 len 00008A48 (34 KiB): IRAM[0m
+[0;32mI (497) spi_flash: detected chip: generic[0m
+[0;32mI (500) spi_flash: flash io: dio[0m
+[0;33mW (504) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (519) main_task: Started on CPU0[0m
+[0;32mI (529) main_task: Calling app_main()[0m
+[0;32mI (569) wifi:wifi driver task: 3ffbfc78, prio:23, stack:6656, core=0[0m
+[0;32mI (579) wifi:wifi firmware version: cc1dd81[0m
+[0;32mI (579) wifi:wifi certification version: v7.0[0m
+[0;32mI (589) wifi:config NVS flash: enabled[0m
+[0;32mI (589) wifi:config nano formating: disabled[0m
+[0;32mI (589) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (589) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (599) wifi:Init management short buffer num: 32[0m
+[0;32mI (599) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (609) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (609) wifi:Init static rx buffer num: 10[0m
+[0;32mI (609) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (619) wifi_init: rx ba win: 6[0m
+[0;32mI (619) wifi_init: tcpip mbox: 32[0m
+[0;32mI (629) wifi_init: udp mbox: 6[0m
+[0;32mI (629) wifi_init: tcp mbox: 6[0m
+[0;32mI (629) wifi_init: tcp tx win: 5760[0m
+[0;32mI (639) wifi_init: tcp rx win: 5760[0m
+[0;32mI (639) wifi_init: tcp mss: 1440[0m
+[0;32mI (649) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (649) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (659) phy_init: phy_version 4791,2c4672b,Dec 20 2023,16:06:06[0m
+[0;32mI (739) wifi:mode : sta (f8:b3:b7:7f:23:38)[0m
+[0;32mI (739) wifi:enable tsf[0m
+[0;32mI (739) TCP_SERVER: Connecting to Wifi...[0m
+[1;31mE (749) wifi:sta is connecting, return error[0m
+[0;32mI (759) wifi:new:<1,0>, old:<1,0>, ap:<255,255>, sta:<1,0>, prof:1[0m
+[0;32mI (759) wifi:state: init -> auth (b0)[0m
+[0;32mI (819) wifi:state: auth -> init (1c0)[0m
+[0;32mI (819) wifi:new:<1,0>, old:<1,0>, ap:<255,255>, sta:<1,0>, prof:1[0m
+[0;32mI (1749) TCP_SERVER: Connected to WiFi[0m
+[0;32mI (1749) TCP_SERVER: IP Address: 0.0.0.0[0m
+[0;32mI (1749) TCP_SERVER: TCP server started, listening on port 80[0m
+[0;32mI (2249) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (4249) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (5649) uart_Test: Received 77 bytes: ��OV7670 initialization failed!
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (7649) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (9649) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (11649) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (13649) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (15649) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (17749) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (19749) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (21749) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (23749) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (25749) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (27749) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (29749) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (31749) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (33749) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (35749) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (37749) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (39749) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (41749) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (43749) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (45749) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (47749) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (49749) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (51749) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (53749) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (55749) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (57849) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (59849) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (61849) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (63849) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (65849) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (67849) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (69849) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (71849) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (73849) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (75849) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (77849) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (79849) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (81849) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (83849) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (85849) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (87849) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (89849) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (91849) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (93849) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (95849) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (97949) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (99949) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (101949) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (103949) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (105949) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (107949) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (109949) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (111949) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (113949) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (115949) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (117949) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (119949) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (121949) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (123949) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (125949) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (127949) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (129949) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (131949) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (133949) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (135949) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (138049) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (140049) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (142049) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (144049) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (146049) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (148049) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (150049) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (152049) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (154049) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (156049) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (158049) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (160049) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (162049) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (164049) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (166049) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (168049) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (170049) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (172049) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (174049) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (176049) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (178149) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (180149) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (182149) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (184149) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (186149) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (188149) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (190149) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (192149) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (194149) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (196149) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (198149) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (200149) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (202149) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (204149) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (206149) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (208149) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (210149) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (212149) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (214149) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (216149) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (218249) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (220249) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (222249) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (224249) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (226249) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (228249) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (230249) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (232249) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (234249) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (236249) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (238249) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (240249) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (242249) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (244249) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (246249) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (248249) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (250249) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (252249) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (254249) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (256249) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (258349) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (260349) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (262349) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (264349) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (266349) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (268349) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (270349) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (272349) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (274349) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (276349) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (278349) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (280349) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (282349) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (284349) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (286349) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (288349) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (290349) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (292349) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (294349) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (296349) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (298449) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (300449) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (302449) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (304449) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (306449) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (308449) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (310449) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (312449) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (314449) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (316449) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (318449) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (320449) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (322449) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (324449) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (326449) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (328449) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (330449) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (332449) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (334449) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (336449) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (338549) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (340549) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (342549) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (344549) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (346549) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (348549) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (350549) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (352549) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (354549) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (356549) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (358549) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (360549) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (362549) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (364549) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (366549) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (368549) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (370549) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (372549) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (374549) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (376549) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (378649) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (380649) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (382649) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (384649) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (386649) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (388649) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (390649) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (392649) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (394649) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (396649) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (398649) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (400649) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (402649) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (404649) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (406649) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (408649) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (410649) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (412649) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (414649) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (416649) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (418749) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (420749) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (422749) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (424749) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (426749) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (428749) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (430749) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (432749) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (434749) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (436749) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (438749) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (440749) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (442749) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (444749) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (446749) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (448749) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (450749) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (452749) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (454749) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (456749) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (458849) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (460849) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (462849) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (464849) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (466849) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (468849) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (470849) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (472849) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (474849) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (476849) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (478849) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (480849) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (482849) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (484849) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (486849) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (488849) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (490849) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (492849) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (494849) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (496849) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (498949) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (500949) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (502949) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (504949) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (506949) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (508949) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (510949) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (512949) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (514949) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (516949) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (518949) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (520949) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (522949) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (524949) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (526949) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (528949) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (530949) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (532949) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (534949) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (536949) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (539049) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (541049) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (543049) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (545049) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (547049) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (549049) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (551049) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (553049) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (555049) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (557049) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (559049) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (561049) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (563049) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (565049) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (567049) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (569049) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (571049) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (573049) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (575049) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (577049) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (579149) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (581149) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (583149) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (585149) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (587149) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (589149) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (591149) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (593149) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (595149) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (597149) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (599149) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (601149) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (603149) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (605149) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (607149) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (609149) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (611149) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (613149) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (615149) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (617149) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (619249) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (621249) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (623249) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (625249) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (627249) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (629249) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (631249) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (633249) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (635249) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (637249) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (639249) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (641249) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (643249) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (645249) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (647249) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (649249) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (651249) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (653249) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (655249) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (657249) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (659349) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (661349) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (663349) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (665349) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (667349) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (669349) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (671349) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (673349) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (675349) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (677349) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (679349) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (681349) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (683349) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (685349) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (687349) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (689349) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (691349) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (693349) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (695349) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (697349) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (699449) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (701449) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (703449) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (705449) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (707449) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (709449) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (711449) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (713449) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (715449) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (717449) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (719449) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (721449) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (723449) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (725449) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (727449) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (729449) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (731449) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (733449) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (735449) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (737449) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (739549) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (741549) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (743549) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (745549) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (747549) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (749549) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (751549) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (753549) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (755549) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (757549) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (759549) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (761549) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (763549) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (765549) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (767549) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (769549) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (771549) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (773549) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (775549) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (777549) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (779649) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (781649) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (783649) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (785649) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (787649) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (789649) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (791649) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (793649) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (795649) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (797649) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (799649) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (801649) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (803649) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (805649) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (807649) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (809649) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (811649) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (813649) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (815649) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (817649) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (819749) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (821749) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (823749) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (825749) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (827749) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (829749) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (831749) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (833749) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (835749) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (837749) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (839749) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (841749) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (843749) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (845749) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (847749) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (849749) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (851749) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (853749) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (855749) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (857749) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (859849) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (861849) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (863849) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (865849) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (867849) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (869849) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (871849) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (873849) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (875849) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (877849) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (879849) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (881849) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (883849) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (885849) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (887849) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (889849) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (891849) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (893849) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (895849) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (897849) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (899949) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (901949) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (903949) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (905949) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (907949) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (909949) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (911949) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (913949) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (915949) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (917949) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (919949) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (921949) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (923949) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (925949) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (927949) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (929949) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (931949) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (933949) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (935949) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (937949) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (940049) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (942049) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (944049) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (946049) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (948049) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (950049) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (952049) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (954049) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (956049) uart_Test: Received 42 bytes: Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (957049) uart_Test: Received 2 bytes: [0m
+[0;32mI (957149) uart_Test: Received 10 bytes: [0m
+[0;32mI (957249) uart_Test: Received 10 bytes: [0m
+[0;32mI (957349) uart_Test: Received 9 bytes: [0m
+[0;32mI (957449) uart_Test: Received 9 bytes: [0m
+[0;32mI (957549) uart_Test: Received 8 bytes: [0m
+[0;32mI (957649) uart_Test: Received 10 bytes: [0m
+[0;32mI (957749) uart_Test: Received 8 bytes: [0m
+[0;32mI (957849) uart_Test: Received 8 bytes: [0m
+[0;32mI (957949) uart_Test: Received 8 bytes: [0m
+[0;32mI (958049) uart_Test: Received 8 bytes: [0m
+[0;32mI (958149) uart_Test: Received 9 bytes: [0m
+[0;32mI (958249) uart_Test: Received 10 bytes: [0m
+[0;32mI (958349) uart_Test: Received 9 bytes: [0m
+[0;32mI (958449) uart_Test: Received 8 bytes: [0m
+[0;32mI (958549) uart_Test: Received 10 bytes: [0m
+[0;32mI (958649) uart_Test: Received 9 bytes: [0m
+[0;32mI (958749) uart_Test: Received 9 bytes: [0m
+[0;32mI (958849) uart_Test: Received 10 bytes: [0m
+[0;32mI (958949) uart_Test: Received 9 bytes: [0m
+[0;32mI (959049) uart_Test: Received 8 bytes: [0m
+[0;32mI (959149) uart_Test: Received 10 bytes: [0m
+[0;32mI (959249) uart_Test: Received 10 bytes: [0m
+[0;32mI (959349) uart_Test: Received 10 bytes: [0m
+[0;32mI (959449) uart_Test: Received 7 bytes: [0m
+[0;32mI (959549) uart_Test: Received 8 bytes: [0m
+[0;32mI (959649) uart_Test: Received 8 bytes: [0m
+[0;32mI (959749) uart_Test: Received 10 bytes: [0m
+[0;32mI (959849) uart_Test: Received 9 bytes: [0m
+[0;32mI (959949) uart_Test: Received 8 bytes: [0m
+[0;32mI (960049) uart_Test: Received 9 bytes: [0m
+[0;32mI (960149) uart_Test: Received 10 bytes: [0m
+[0;32mI (960249) uart_Test: Received 8 bytes: [0m
+[0;32mI (960349) uart_Test: Received 8 bytes: [0m
+[0;32mI (960449) uart_Test: Received 9 bytes: [0m
+[0;32mI (960549) uart_Test: Received 8 bytes: [0m
+[0;32mI (960649) uart_Test: Received 8 bytes: [0m
+[0;32mI (960749) uart_Test: Received 9 bytes: [0m
+[0;32mI (960849) uart_Test: Received 8 bytes: [0m
+[0;32mI (960949) uart_Test: Received 8 bytes: [0m
+[0;32mI (961049) uart_Test: Received 8 bytes: [0m
+[0;32mI (961149) uart_Test: Received 10 bytes: [0m
+[0;32mI (961249) uart_Test: Received 9 bytes: [0m
+[0;32mI (961349) uart_Test: Received 10 bytes: [0m
+[0;32mI (961449) uart_Test: Received 9 bytes: [0m
+[0;32mI (961549) uart_Test: Received 10 bytes: [0m
+[0;32mI (961649) uart_Test: Received 9 bytes: [0m
+[0;32mI (961749) uart_Test: Received 9 bytes: [0m
+[0;32mI (961849) uart_Test: Received 8 bytes: [0m
+[0;32mI (961949) uart_Test: Received 9 bytes: [0m
+[0;32mI (962049) uart_Test: Received 8 bytes: [0m
+[0;32mI (962149) uart_Test: Received 8 bytes: [0m
+[0;32mI (962249) uart_Test: Received 9 bytes: [0m
+[0;32mI (962349) uart_Test: Received 10 bytes: [0m
+[0;32mI (962449) uart_Test: Received 9 bytes: [0m
+[0;32mI (962549) uart_Test: Received 10 bytes: [0m
+[0;32mI (962649) uart_Test: Received 10 bytes: [0m
+[0;32mI (962749) uart_Test: Received 9 bytes: [0m
+[0;32mI (962849) uart_Test: Received 9 bytes: [0m
+[0;32mI (962949) uart_Test: Received 10 bytes: [0m
+[0;32mI (963049) uart_Test: Received 8 bytes: [0m
+[0;32mI (963149) uart_Test: Received 7 bytes: [0m
+[0;32mI (963249) uart_Test: Received 9 bytes: [0m
+[0;32mI (963349) uart_Test: Received 8 bytes: [0m
+[0;32mI (963449) uart_Test: Received 10 bytes: [0m
+[0;32mI (963549) uart_Test: Received 9 bytes: [0m
+[0;32mI (963649) uart_Test: Received 8 bytes: [0m
+[0;32mI (963749) uart_Test: Received 9 bytes: [0m
+[0;32mI (963849) uart_Test: Received 8 bytes: [0m
+[0;32mI (963949) uart_Test: Received 9 bytes: [0m
+[0;32mI (964049) uart_Test: Received 8 bytes: [0m
+[0;32mI (964149) uart_Test: Received 9 bytes: [0m
+[0;32mI (964249) uart_Test: Received 10 bytes: [0m
+[0;32mI (964349) uart_Test: Received 9 bytes: [0m
+[0;32mI (964449) uart_Test: Received 9 bytes: [0m
+[0;32mI (964549) uart_Test: Received 10 bytes: [0m
+[0;32mI (964649) uart_Test: Received 10 bytes: [0m
+[0;32mI (964749) uart_Test: Received 12 bytes: [0m
+[0;32mI (964849) uart_Test: Received 8 bytes: [0m
+[0;32mI (964949) uart_Test: Received 5 bytes: [0m
+[0;32mI (965049) uart_Test: Received 6 bytes: [0m
+[0;32mI (965149) uart_Test: Received 7 bytes: [0m
+[0;32mI (965249) uart_Test: Received 9 bytes: [0m
+[0;32mI (965349) uart_Test: Received 10 bytes: [0m
+[0;32mI (965449) uart_Test: Received 17 bytes: [0m
+[0;32mI (965549) uart_Test: Received 35 bytes: A�A���[0m
+[0;32mI (965649) uart_Test: Received 60 bytes: �[0m
+[0;32mI (965749) uart_Test: Received 63 bytes: �8[0m
+[0;32mI (965849) uart_Test: Received 75 bytes: �[0m
+[0;32mI (966949) uart_Test: Received 81 bytes: Temperature: 14.8��C, Humidity: 61.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (968949) uart_Test: Received 81 bytes: Temperature: 14.8��C, Humidity: 62.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (970949) uart_Test: Received 81 bytes: Temperature: 14.8��C, Humidity: 62.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (973049) uart_Test: Received 81 bytes: Temperature: 14.8��C, Humidity: 62.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (975049) uart_Test: Received 81 bytes: Temperature: 14.5��C, Humidity: 62.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (977049) uart_Test: Received 81 bytes: Temperature: 14.4��C, Humidity: 62.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (979149) uart_Test: Received 81 bytes: Temperature: 14.6��C, Humidity: 64.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (981149) uart_Test: Received 81 bytes: Temperature: 14.8��C, Humidity: 65.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (983149) uart_Test: Received 81 bytes: Temperature: 14.8��C, Humidity: 67.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (985249) uart_Test: Received 81 bytes: Temperature: 15.2��C, Humidity: 69.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (987249) uart_Test: Received 81 bytes: Temperature: 15.7��C, Humidity: 71.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (989249) uart_Test: Received 81 bytes: Temperature: 16.1��C, Humidity: 72.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (991349) uart_Test: Received 81 bytes: Temperature: 16.9��C, Humidity: 73.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (993349) uart_Test: Received 81 bytes: Temperature: 17.4��C, Humidity: 74.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (995349) uart_Test: Received 81 bytes: Temperature: 17.8��C, Humidity: 75.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (997449) uart_Test: Received 81 bytes: Temperature: 18.6��C, Humidity: 77.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (999449) uart_Test: Received 81 bytes: Temperature: 19.0��C, Humidity: 78.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1001449) uart_Test: Received 81 bytes: Temperature: 19.4��C, Humidity: 79.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1003549) uart_Test: Received 81 bytes: Temperature: 19.8��C, Humidity: 81.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1005549) uart_Test: Received 81 bytes: Temperature: 20.2��C, Humidity: 82.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1007549) uart_Test: Received 81 bytes: Temperature: 20.6��C, Humidity: 82.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1009649) uart_Test: Received 81 bytes: Temperature: 21.0��C, Humidity: 82.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1011649) uart_Test: Received 81 bytes: Temperature: 21.4��C, Humidity: 83.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1013649) uart_Test: Received 81 bytes: Temperature: 21.8��C, Humidity: 83.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1015749) uart_Test: Received 81 bytes: Temperature: 22.2��C, Humidity: 83.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1017749) uart_Test: Received 81 bytes: Temperature: 22.2��C, Humidity: 82.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1019749) uart_Test: Received 81 bytes: Temperature: 22.6��C, Humidity: 81.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1021849) uart_Test: Received 81 bytes: Temperature: 22.6��C, Humidity: 81.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1023849) uart_Test: Received 81 bytes: Temperature: 22.6��C, Humidity: 80.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1025849) uart_Test: Received 81 bytes: Temperature: 22.6��C, Humidity: 78.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1027949) uart_Test: Received 81 bytes: Temperature: 22.6��C, Humidity: 77.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1029949) uart_Test: Received 81 bytes: Temperature: 22.7��C, Humidity: 74.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1031949) uart_Test: Received 81 bytes: Temperature: 22.8��C, Humidity: 73.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1034049) uart_Test: Received 81 bytes: Temperature: 23.0��C, Humidity: 71.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1036049) uart_Test: Received 81 bytes: Temperature: 23.0��C, Humidity: 70.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1038049) uart_Test: Received 81 bytes: Temperature: 23.0��C, Humidity: 68.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1040149) uart_Test: Received 81 bytes: Temperature: 23.0��C, Humidity: 66.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1042149) uart_Test: Received 81 bytes: Temperature: 22.7��C, Humidity: 64.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1044149) uart_Test: Received 81 bytes: Temperature: 22.6��C, Humidity: 62.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1046249) uart_Test: Received 81 bytes: Temperature: 22.6��C, Humidity: 60.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1048249) uart_Test: Received 81 bytes: Temperature: 22.6��C, Humidity: 59.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1050249) uart_Test: Received 81 bytes: Temperature: 22.6��C, Humidity: 58.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1052349) uart_Test: Received 81 bytes: Temperature: 22.6��C, Humidity: 56.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1054349) uart_Test: Received 81 bytes: Temperature: 22.6��C, Humidity: 55.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1056349) uart_Test: Received 81 bytes: Temperature: 22.6��C, Humidity: 54.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1058449) uart_Test: Received 81 bytes: Temperature: 22.6��C, Humidity: 53.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1060449) uart_Test: Received 81 bytes: Temperature: 22.6��C, Humidity: 52.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1062449) uart_Test: Received 81 bytes: Temperature: 22.6��C, Humidity: 51.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1064549) uart_Test: Received 81 bytes: Temperature: 22.2��C, Humidity: 50.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1066549) uart_Test: Received 81 bytes: Temperature: 22.2��C, Humidity: 49.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1068549) uart_Test: Received 81 bytes: Temperature: 22.2��C, Humidity: 49.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1070649) uart_Test: Received 81 bytes: Temperature: 22.2��C, Humidity: 49.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1072649) uart_Test: Received 81 bytes: Temperature: 22.2��C, Humidity: 48.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1074649) uart_Test: Received 81 bytes: Temperature: 22.2��C, Humidity: 48.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1076749) uart_Test: Received 81 bytes: Temperature: 22.2��C, Humidity: 48.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1078749) uart_Test: Received 81 bytes: Temperature: 22.2��C, Humidity: 48.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1080749) uart_Test: Received 81 bytes: Temperature: 22.2��C, Humidity: 47.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1082849) uart_Test: Received 81 bytes: Temperature: 21.9��C, Humidity: 47.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1084849) uart_Test: Received 81 bytes: Temperature: 21.8��C, Humidity: 47.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1086849) uart_Test: Received 81 bytes: Temperature: 21.8��C, Humidity: 47.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1088949) uart_Test: Received 81 bytes: Temperature: 21.8��C, Humidity: 47.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1090949) uart_Test: Received 81 bytes: Temperature: 21.8��C, Humidity: 47.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1092949) uart_Test: Received 81 bytes: Temperature: 21.8��C, Humidity: 47.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1095049) uart_Test: Received 81 bytes: Temperature: 21.8��C, Humidity: 46.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1097049) uart_Test: Received 81 bytes: Temperature: 21.4��C, Humidity: 47.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1099049) uart_Test: Received 81 bytes: Temperature: 21.4��C, Humidity: 47.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1101149) uart_Test: Received 81 bytes: Temperature: 21.4��C, Humidity: 47.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1103149) uart_Test: Received 81 bytes: Temperature: 21.4��C, Humidity: 47.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1105149) uart_Test: Received 81 bytes: Temperature: 21.4��C, Humidity: 47.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1107249) uart_Test: Received 81 bytes: Temperature: 21.4��C, Humidity: 47.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1109249) uart_Test: Received 81 bytes: Temperature: 21.3��C, Humidity: 47.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1111249) uart_Test: Received 81 bytes: Temperature: 21.0��C, Humidity: 47.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1113349) uart_Test: Received 81 bytes: Temperature: 21.0��C, Humidity: 47.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1115349) uart_Test: Received 81 bytes: Temperature: 21.0��C, Humidity: 47.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1117349) uart_Test: Received 81 bytes: Temperature: 21.0��C, Humidity: 47.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1119449) uart_Test: Received 81 bytes: Temperature: 21.0��C, Humidity: 47.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1121449) uart_Test: Received 81 bytes: Temperature: 21.0��C, Humidity: 47.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1123449) uart_Test: Received 81 bytes: Temperature: 20.6��C, Humidity: 48.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1125549) uart_Test: Received 81 bytes: Temperature: 20.6��C, Humidity: 48.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1127549) uart_Test: Received 81 bytes: Temperature: 20.6��C, Humidity: 48.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1129549) uart_Test: Received 81 bytes: Temperature: 20.6��C, Humidity: 48.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1131649) uart_Test: Received 81 bytes: Temperature: 20.6��C, Humidity: 48.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1133649) uart_Test: Received 81 bytes: Temperature: 20.6��C, Humidity: 48.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1135649) uart_Test: Received 81 bytes: Temperature: 20.2��C, Humidity: 48.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1137749) uart_Test: Received 81 bytes: Temperature: 20.2��C, Humidity: 48.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1139749) uart_Test: Received 81 bytes: Temperature: 20.2��C, Humidity: 48.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1140949) uart_Test: Received 5 bytes: [0m
+[0;32mI (1141049) uart_Test: Received 8 bytes: [0m
+[0;32mI (1141149) uart_Test: Received 8 bytes: [0m
+[0;32mI (1141249) uart_Test: Received 9 bytes: �
+[0;32mI (1141349) uart_Test: Received 9 bytes: �
+[0;32mI (1141449) uart_Test: Received 10 bytes: �
+[0;32mI (1141549) uart_Test: Received 9 bytes: [0m
+[0;32mI (1141649) uart_Test: Received 8 bytes: �
+[0;32mI (1141749) uart_Test: Received 10 bytes: �
+[0;32mI (1141849) uart_Test: Received 9 bytes: [0m
+[0;32mI (1141949) uart_Test: Received 10 bytes: �
+[0;32mI (1142049) uart_Test: Received 9 bytes: [0m
+[0;32mI (1142149) uart_Test: Received 10 bytes: �
+[0;32mI (1142249) uart_Test: Received 10 bytes: �
+[0;32mI (1142349) uart_Test: Received 10 bytes: [0m
+[0;32mI (1142449) uart_Test: Received 9 bytes: [0m
+[0;32mI (1142549) uart_Test: Received 6 bytes: [0m
+[0;32mI (1142649) uart_Test: Received 7 bytes: [0m
+[0;32mI (1142749) uart_Test: Received 7 bytes: [0m
+[0;32mI (1142849) uart_Test: Received 9 bytes: �
+[0;32mI (1142949) uart_Test: Received 8 bytes: [0m
+[0;32mI (1143149) uart_Test: Received 20 bytes: [0m
+[0;32mI (1143249) uart_Test: Received 16 bytes: �
+[0;32mI (1143349) uart_Test: Received 12 bytes: M[0m
+[0;32mI (1143449) uart_Test: Received 32 bytes: [0m
+[0;32mI (1143549) uart_Test: Received 49 bytes: ����[0m
+[0;32mI (1143649) uart_Test: Received 67 bytes: [0m
+[0;32mI (1143749) uart_Test: Received 68 bytes: [0m
+[0;32mI (1143849) uart_Test: Received 74 bytes: [0m
+[0;32mI (1143949) uart_Test: Received 74 bytes: [0m
+[0;32mI (1144049) uart_Test: Received 59 bytes: [0m
+[0;32mI (1145049) uart_Test: Received 81 bytes: Temperature: 19.8��C, Humidity: 48.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1147149) uart_Test: Received 81 bytes: Temperature: 19.8��C, Humidity: 48.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1149149) uart_Test: Received 81 bytes: Temperature: 19.8��C, Humidity: 48.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1151149) uart_Test: Received 81 bytes: Temperature: 19.8��C, Humidity: 49.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1153249) uart_Test: Received 81 bytes: Temperature: 19.8��C, Humidity: 49.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1155249) uart_Test: Received 81 bytes: Temperature: 19.8��C, Humidity: 49.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1157249) uart_Test: Received 81 bytes: Temperature: 19.4��C, Humidity: 49.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1159349) uart_Test: Received 81 bytes: Temperature: 19.4��C, Humidity: 49.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1161349) uart_Test: Received 81 bytes: Temperature: 19.4��C, Humidity: 49.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1163349) uart_Test: Received 81 bytes: Temperature: 19.4��C, Humidity: 49.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1165449) uart_Test: Received 81 bytes: Temperature: 19.4��C, Humidity: 49.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1167449) uart_Test: Received 81 bytes: Temperature: 19.4��C, Humidity: 49.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1169449) uart_Test: Received 81 bytes: Temperature: 19.4��C, Humidity: 49.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1171549) uart_Test: Received 81 bytes: Temperature: 19.4��C, Humidity: 49.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1173549) uart_Test: Received 81 bytes: Temperature: 19.4��C, Humidity: 49.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1175549) uart_Test: Received 81 bytes: Temperature: 19.4��C, Humidity: 50.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1177649) uart_Test: Received 81 bytes: Temperature: 19.4��C, Humidity: 50.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1179649) uart_Test: Received 81 bytes: Temperature: 19.4��C, Humidity: 50.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1181649) uart_Test: Received 81 bytes: Temperature: 19.4��C, Humidity: 50.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1183749) uart_Test: Received 81 bytes: Temperature: 19.2��C, Humidity: 50.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1185749) uart_Test: Received 81 bytes: Temperature: 19.0��C, Humidity: 50.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1187749) uart_Test: Received 81 bytes: Temperature: 19.0��C, Humidity: 50.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1189849) uart_Test: Received 81 bytes: Temperature: 19.0��C, Humidity: 50.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1191849) uart_Test: Received 81 bytes: Temperature: 19.0��C, Humidity: 50.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1193849) uart_Test: Received 81 bytes: Temperature: 19.0��C, Humidity: 50.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1195949) uart_Test: Received 81 bytes: Temperature: 19.0��C, Humidity: 50.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1197949) uart_Test: Received 81 bytes: Temperature: 19.0��C, Humidity: 50.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1199949) uart_Test: Received 81 bytes: Temperature: 19.0��C, Humidity: 50.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1202049) uart_Test: Received 81 bytes: Temperature: 19.0��C, Humidity: 50.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1204049) uart_Test: Received 81 bytes: Temperature: 19.0��C, Humidity: 50.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1206049) uart_Test: Received 81 bytes: Temperature: 19.0��C, Humidity: 50.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1208149) uart_Test: Received 81 bytes: Temperature: 19.0��C, Humidity: 50.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1210149) uart_Test: Received 81 bytes: Temperature: 19.0��C, Humidity: 50.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1212149) uart_Test: Received 81 bytes: Temperature: 18.6��C, Humidity: 50.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1214149) uart_Test: Received 81 bytes: Temperature: 18.6��C, Humidity: 50.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1216249) uart_Test: Received 81 bytes: Temperature: 18.6��C, Humidity: 50.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1218249) uart_Test: Received 81 bytes: Temperature: 18.6��C, Humidity: 50.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1220249) uart_Test: Received 81 bytes: Temperature: 18.6��C, Humidity: 50.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1222349) uart_Test: Received 81 bytes: Temperature: 18.6��C, Humidity: 50.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1224349) uart_Test: Received 81 bytes: Temperature: 18.6��C, Humidity: 50.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1226349) uart_Test: Received 81 bytes: Temperature: 18.2��C, Humidity: 50.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1228449) uart_Test: Received 81 bytes: Temperature: 18.2��C, Humidity: 50.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1230449) uart_Test: Received 81 bytes: Temperature: 18.2��C, Humidity: 50.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1232449) uart_Test: Received 81 bytes: Temperature: 18.2��C, Humidity: 50.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1234549) uart_Test: Received 81 bytes: Temperature: 18.2��C, Humidity: 50.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1236549) uart_Test: Received 81 bytes: Temperature: 18.2��C, Humidity: 50.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1238549) uart_Test: Received 81 bytes: Temperature: 18.2��C, Humidity: 51.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1240649) uart_Test: Received 81 bytes: Temperature: 18.2��C, Humidity: 51.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1242649) uart_Test: Received 81 bytes: Temperature: 18.2��C, Humidity: 51.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1244649) uart_Test: Received 81 bytes: Temperature: 18.2��C, Humidity: 51.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1246749) uart_Test: Received 81 bytes: Temperature: 18.2��C, Humidity: 51.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1248749) uart_Test: Received 81 bytes: Temperature: 17.8��C, Humidity: 51.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1250749) uart_Test: Received 81 bytes: Temperature: 17.8��C, Humidity: 51.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1252849) uart_Test: Received 81 bytes: Temperature: 17.8��C, Humidity: 51.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1254849) uart_Test: Received 81 bytes: Temperature: 17.8��C, Humidity: 51.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1256849) uart_Test: Received 81 bytes: Temperature: 17.8��C, Humidity: 51.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1258949) uart_Test: Received 81 bytes: Temperature: 17.8��C, Humidity: 51.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1260949) uart_Test: Received 81 bytes: Temperature: 17.8��C, Humidity: 51.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1262949) uart_Test: Received 81 bytes: Temperature: 17.8��C, Humidity: 51.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1265049) uart_Test: Received 81 bytes: Temperature: 17.8��C, Humidity: 51.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1267049) uart_Test: Received 81 bytes: Temperature: 17.8��C, Humidity: 52.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1269049) uart_Test: Received 81 bytes: Temperature: 17.8��C, Humidity: 52.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1271149) uart_Test: Received 81 bytes: Temperature: 17.8��C, Humidity: 52.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1273149) uart_Test: Received 81 bytes: Temperature: 17.8��C, Humidity: 52.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1275149) uart_Test: Received 81 bytes: Temperature: 17.8��C, Humidity: 52.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1277249) uart_Test: Received 81 bytes: Temperature: 17.8��C, Humidity: 52.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1279249) uart_Test: Received 81 bytes: Temperature: 17.8��C, Humidity: 52.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1281249) uart_Test: Received 81 bytes: Temperature: 17.8��C, Humidity: 52.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1283349) uart_Test: Received 81 bytes: Temperature: 17.8��C, Humidity: 53.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1285349) uart_Test: Received 81 bytes: Temperature: 17.8��C, Humidity: 53.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1287349) uart_Test: Received 81 bytes: Temperature: 17.5��C, Humidity: 53.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1289449) uart_Test: Received 81 bytes: Temperature: 17.4��C, Humidity: 53.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1291449) uart_Test: Received 81 bytes: Temperature: 17.4��C, Humidity: 53.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1293449) uart_Test: Received 81 bytes: Temperature: 17.4��C, Humidity: 53.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1295549) uart_Test: Received 81 bytes: Temperature: 17.4��C, Humidity: 53.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1297549) uart_Test: Received 81 bytes: Temperature: 17.4��C, Humidity: 53.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1299549) uart_Test: Received 81 bytes: Temperature: 17.4��C, Humidity: 53.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1301649) uart_Test: Received 81 bytes: Temperature: 17.4��C, Humidity: 53.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1303649) uart_Test: Received 81 bytes: Temperature: 17.4��C, Humidity: 53.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1305649) uart_Test: Received 81 bytes: Temperature: 17.4��C, Humidity: 53.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1307749) uart_Test: Received 81 bytes: Temperature: 17.4��C, Humidity: 53.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1309749) uart_Test: Received 81 bytes: Temperature: 17.4��C, Humidity: 54.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1311749) uart_Test: Received 81 bytes: Temperature: 17.4��C, Humidity: 54.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1313849) uart_Test: Received 81 bytes: Temperature: 17.4��C, Humidity: 54.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1315849) uart_Test: Received 81 bytes: Temperature: 17.4��C, Humidity: 54.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1317849) uart_Test: Received 81 bytes: Temperature: 17.8��C, Humidity: 54.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1319949) uart_Test: Received 81 bytes: Temperature: 17.8��C, Humidity: 54.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1321949) uart_Test: Received 81 bytes: Temperature: 17.8��C, Humidity: 54.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1323949) uart_Test: Received 81 bytes: Temperature: 17.8��C, Humidity: 54.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1326049) uart_Test: Received 81 bytes: Temperature: 17.8��C, Humidity: 54.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1328049) uart_Test: Received 81 bytes: Temperature: 17.8��C, Humidity: 54.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1330049) uart_Test: Received 81 bytes: Temperature: 17.8��C, Humidity: 54.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1332149) uart_Test: Received 81 bytes: Temperature: 17.8��C, Humidity: 54.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1334149) uart_Test: Received 81 bytes: Temperature: 17.8��C, Humidity: 54.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1336149) uart_Test: Received 81 bytes: Temperature: 17.8��C, Humidity: 54.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1338249) uart_Test: Received 81 bytes: Temperature: 17.8��C, Humidity: 54.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1340249) uart_Test: Received 81 bytes: Temperature: 17.8��C, Humidity: 54.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1342249) uart_Test: Received 81 bytes: Temperature: 17.8��C, Humidity: 54.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1344349) uart_Test: Received 81 bytes: Temperature: 17.8��C, Humidity: 54.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1346349) uart_Test: Received 81 bytes: Temperature: 17.8��C, Humidity: 54.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1348349) uart_Test: Received 81 bytes: Temperature: 17.8��C, Humidity: 54.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1350449) uart_Test: Received 81 bytes: Temperature: 17.8��C, Humidity: 54.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1352449) uart_Test: Received 81 bytes: Temperature: 17.8��C, Humidity: 54.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1354449) uart_Test: Received 81 bytes: Temperature: 17.8��C, Humidity: 54.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1356549) uart_Test: Received 81 bytes: Temperature: 17.8��C, Humidity: 54.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1358549) uart_Test: Received 81 bytes: Temperature: 17.8��C, Humidity: 54.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1360549) uart_Test: Received 81 bytes: Temperature: 17.8��C, Humidity: 54.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1362649) uart_Test: Received 81 bytes: Temperature: 17.8��C, Humidity: 54.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1364649) uart_Test: Received 81 bytes: Temperature: 17.8��C, Humidity: 54.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1366649) uart_Test: Received 81 bytes: Temperature: 17.8��C, Humidity: 54.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1368749) uart_Test: Received 81 bytes: Temperature: 17.8��C, Humidity: 54.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1370749) uart_Test: Received 81 bytes: Temperature: 17.8��C, Humidity: 54.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1372749) uart_Test: Received 81 bytes: Temperature: 17.8��C, Humidity: 54.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1374849) uart_Test: Received 81 bytes: Temperature: 17.8��C, Humidity: 54.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1376849) uart_Test: Received 81 bytes: Temperature: 17.8��C, Humidity: 54.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1378849) uart_Test: Received 81 bytes: Temperature: 17.8��C, Humidity: 54.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1380949) uart_Test: Received 81 bytes: Temperature: 17.8��C, Humidity: 54.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1382949) uart_Test: Received 81 bytes: Temperature: 17.8��C, Humidity: 53.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1384949) uart_Test: Received 81 bytes: Temperature: 17.8��C, Humidity: 53.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1387049) uart_Test: Received 81 bytes: Temperature: 17.8��C, Humidity: 53.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1389049) uart_Test: Received 81 bytes: Temperature: 17.8��C, Humidity: 53.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1391049) uart_Test: Received 81 bytes: Temperature: 17.8��C, Humidity: 53.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1393149) uart_Test: Received 81 bytes: Temperature: 17.8��C, Humidity: 53.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1395149) uart_Test: Received 81 bytes: Temperature: 17.8��C, Humidity: 53.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1397149) uart_Test: Received 81 bytes: Temperature: 17.8��C, Humidity: 53.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1399249) uart_Test: Received 81 bytes: Temperature: 17.8��C, Humidity: 54.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1401249) uart_Test: Received 81 bytes: Temperature: 17.8��C, Humidity: 54.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1403249) uart_Test: Received 81 bytes: Temperature: 17.8��C, Humidity: 54.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1405349) uart_Test: Received 81 bytes: Temperature: 17.8��C, Humidity: 54.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1407349) uart_Test: Received 81 bytes: Temperature: 17.8��C, Humidity: 54.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1409349) uart_Test: Received 81 bytes: Temperature: 17.8��C, Humidity: 54.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1411449) uart_Test: Received 81 bytes: Temperature: 17.8��C, Humidity: 54.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1413449) uart_Test: Received 81 bytes: Temperature: 17.8��C, Humidity: 54.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1415449) uart_Test: Received 81 bytes: Temperature: 18.2��C, Humidity: 54.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1417449) uart_Test: Received 81 bytes: Temperature: 18.2��C, Humidity: 54.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1419549) uart_Test: Received 81 bytes: Temperature: 18.2��C, Humidity: 54.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1421549) uart_Test: Received 81 bytes: Temperature: 18.2��C, Humidity: 54.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1423549) uart_Test: Received 81 bytes: Temperature: 18.2��C, Humidity: 54.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1425649) uart_Test: Received 81 bytes: Temperature: 18.2��C, Humidity: 54.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1427649) uart_Test: Received 81 bytes: Temperature: 18.2��C, Humidity: 53.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1429649) uart_Test: Received 81 bytes: Temperature: 18.2��C, Humidity: 53.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1431749) uart_Test: Received 81 bytes: Temperature: 18.2��C, Humidity: 53.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1433749) uart_Test: Received 81 bytes: Temperature: 18.2��C, Humidity: 53.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1435749) uart_Test: Received 81 bytes: Temperature: 18.2��C, Humidity: 53.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1437849) uart_Test: Received 81 bytes: Temperature: 18.2��C, Humidity: 53.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1439849) uart_Test: Received 81 bytes: Temperature: 18.2��C, Humidity: 53.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1441849) uart_Test: Received 81 bytes: Temperature: 18.2��C, Humidity: 53.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1443949) uart_Test: Received 81 bytes: Temperature: 18.6��C, Humidity: 53.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1445949) uart_Test: Received 81 bytes: Temperature: 18.6��C, Humidity: 53.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1447949) uart_Test: Received 81 bytes: Temperature: 18.6��C, Humidity: 53.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1450049) uart_Test: Received 81 bytes: Temperature: 18.6��C, Humidity: 53.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1452049) uart_Test: Received 81 bytes: Temperature: 18.6��C, Humidity: 53.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1454049) uart_Test: Received 81 bytes: Temperature: 18.6��C, Humidity: 53.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1456149) uart_Test: Received 81 bytes: Temperature: 18.6��C, Humidity: 53.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1458149) uart_Test: Received 81 bytes: Temperature: 18.6��C, Humidity: 53.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1460149) uart_Test: Received 81 bytes: Temperature: 18.6��C, Humidity: 53.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1462249) uart_Test: Received 81 bytes: Temperature: 18.6��C, Humidity: 53.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1464249) uart_Test: Received 81 bytes: Temperature: 18.6��C, Humidity: 53.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1466249) uart_Test: Received 81 bytes: Temperature: 18.6��C, Humidity: 53.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1468349) uart_Test: Received 81 bytes: Temperature: 18.6��C, Humidity: 53.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1470349) uart_Test: Received 81 bytes: Temperature: 18.6��C, Humidity: 53.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1472349) uart_Test: Received 81 bytes: Temperature: 18.6��C, Humidity: 53.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1474449) uart_Test: Received 81 bytes: Temperature: 18.6��C, Humidity: 53.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1476449) uart_Test: Received 81 bytes: Temperature: 18.6��C, Humidity: 53.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1478449) uart_Test: Received 81 bytes: Temperature: 18.6��C, Humidity: 53.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1480549) uart_Test: Received 81 bytes: Temperature: 18.6��C, Humidity: 53.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1482549) uart_Test: Received 81 bytes: Temperature: 18.6��C, Humidity: 53.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1484549) uart_Test: Received 81 bytes: Temperature: 18.6��C, Humidity: 53.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1486649) uart_Test: Received 81 bytes: Temperature: 18.7��C, Humidity: 53.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1488649) uart_Test: Received 81 bytes: Temperature: 19.0��C, Humidity: 53.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1490649) uart_Test: Received 81 bytes: Temperature: 19.0��C, Humidity: 53.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1492749) uart_Test: Received 81 bytes: Temperature: 19.0��C, Humidity: 53.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1494749) uart_Test: Received 81 bytes: Temperature: 19.0��C, Humidity: 53.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1496749) uart_Test: Received 81 bytes: Temperature: 19.0��C, Humidity: 53.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1498849) uart_Test: Received 81 bytes: Temperature: 19.0��C, Humidity: 53.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1500849) uart_Test: Received 81 bytes: Temperature: 19.0��C, Humidity: 53.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1502849) uart_Test: Received 81 bytes: Temperature: 19.0��C, Humidity: 53.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1504949) uart_Test: Received 81 bytes: Temperature: 18.7��C, Humidity: 53.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1506949) uart_Test: Received 81 bytes: Temperature: 18.6��C, Humidity: 52.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1508949) uart_Test: Received 81 bytes: Temperature: 18.6��C, Humidity: 52.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1511049) uart_Test: Received 81 bytes: Temperature: 18.6��C, Humidity: 52.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1513049) uart_Test: Received 81 bytes: Temperature: 18.6��C, Humidity: 52.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1515049) uart_Test: Received 81 bytes: Temperature: 18.6��C, Humidity: 52.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1517149) uart_Test: Received 81 bytes: Temperature: 18.6��C, Humidity: 52.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1519149) uart_Test: Received 81 bytes: Temperature: 18.6��C, Humidity: 52.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1521149) uart_Test: Received 81 bytes: Temperature: 18.6��C, Humidity: 52.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1523249) uart_Test: Received 81 bytes: Temperature: 18.6��C, Humidity: 52.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1525249) uart_Test: Received 81 bytes: Temperature: 18.6��C, Humidity: 52.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1527249) uart_Test: Received 81 bytes: Temperature: 18.6��C, Humidity: 52.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1529349) uart_Test: Received 81 bytes: Temperature: 18.6��C, Humidity: 53.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1531349) uart_Test: Received 81 bytes: Temperature: 18.6��C, Humidity: 53.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1533349) uart_Test: Received 81 bytes: Temperature: 18.6��C, Humidity: 53.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1535449) uart_Test: Received 81 bytes: Temperature: 18.6��C, Humidity: 53.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1537449) uart_Test: Received 81 bytes: Temperature: 18.6��C, Humidity: 53.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1539449) uart_Test: Received 81 bytes: Temperature: 18.6��C, Humidity: 53.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1541549) uart_Test: Received 81 bytes: Temperature: 18.6��C, Humidity: 53.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1543549) uart_Test: Received 81 bytes: Temperature: 18.6��C, Humidity: 53.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1545549) uart_Test: Received 81 bytes: Temperature: 18.6��C, Humidity: 52.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1547649) uart_Test: Received 81 bytes: Temperature: 18.6��C, Humidity: 52.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1549649) uart_Test: Received 81 bytes: Temperature: 18.6��C, Humidity: 52.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1551649) uart_Test: Received 81 bytes: Temperature: 18.6��C, Humidity: 52.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1553749) uart_Test: Received 81 bytes: Temperature: 18.6��C, Humidity: 52.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1555749) uart_Test: Received 81 bytes: Temperature: 18.6��C, Humidity: 52.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1557749) uart_Test: Received 81 bytes: Temperature: 18.6��C, Humidity: 52.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1559849) uart_Test: Received 81 bytes: Temperature: 18.6��C, Humidity: 52.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1561849) uart_Test: Received 81 bytes: Temperature: 18.6��C, Humidity: 52.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1563849) uart_Test: Received 81 bytes: Temperature: 18.6��C, Humidity: 52.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1565949) uart_Test: Received 81 bytes: Temperature: 18.6��C, Humidity: 51.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1567949) uart_Test: Received 81 bytes: Temperature: 18.6��C, Humidity: 51.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1569949) uart_Test: Received 81 bytes: Temperature: 18.6��C, Humidity: 51.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1572049) uart_Test: Received 81 bytes: Temperature: 18.6��C, Humidity: 51.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1574049) uart_Test: Received 81 bytes: Temperature: 18.6��C, Humidity: 52.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1576049) uart_Test: Received 81 bytes: Temperature: 18.6��C, Humidity: 52.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1578149) uart_Test: Received 81 bytes: Temperature: 18.3��C, Humidity: 52.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1580149) uart_Test: Received 81 bytes: Temperature: 18.2��C, Humidity: 52.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1582149) uart_Test: Received 81 bytes: Temperature: 18.2��C, Humidity: 52.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1584249) uart_Test: Received 81 bytes: Temperature: 18.2��C, Humidity: 52.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1586249) uart_Test: Received 81 bytes: Temperature: 18.2��C, Humidity: 52.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1588249) uart_Test: Received 81 bytes: Temperature: 18.2��C, Humidity: 52.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1590349) uart_Test: Received 81 bytes: Temperature: 18.2��C, Humidity: 52.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1592349) uart_Test: Received 81 bytes: Temperature: 18.2��C, Humidity: 52.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1594349) uart_Test: Received 81 bytes: Temperature: 18.2��C, Humidity: 52.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1596449) uart_Test: Received 81 bytes: Temperature: 18.2��C, Humidity: 52.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1598449) uart_Test: Received 81 bytes: Temperature: 18.2��C, Humidity: 52.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1600449) uart_Test: Received 81 bytes: Temperature: 18.2��C, Humidity: 53.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1602549) uart_Test: Received 81 bytes: Temperature: 18.2��C, Humidity: 53.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1604549) uart_Test: Received 81 bytes: Temperature: 18.2��C, Humidity: 53.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1606549) uart_Test: Received 81 bytes: Temperature: 18.2��C, Humidity: 53.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1608649) uart_Test: Received 81 bytes: Temperature: 18.2��C, Humidity: 53.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1610649) uart_Test: Received 81 bytes: Temperature: 18.2��C, Humidity: 53.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1612649) uart_Test: Received 81 bytes: Temperature: 18.2��C, Humidity: 53.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1614749) uart_Test: Received 81 bytes: Temperature: 18.2��C, Humidity: 53.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1616749) uart_Test: Received 81 bytes: Temperature: 18.2��C, Humidity: 53.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1618749) uart_Test: Received 81 bytes: Temperature: 18.2��C, Humidity: 53.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1620749) uart_Test: Received 81 bytes: Temperature: 18.2��C, Humidity: 53.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1622849) uart_Test: Received 81 bytes: Temperature: 18.2��C, Humidity: 53.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1624849) uart_Test: Received 81 bytes: Temperature: 18.2��C, Humidity: 53.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1626849) uart_Test: Received 81 bytes: Temperature: 18.2��C, Humidity: 53.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1628949) uart_Test: Received 81 bytes: Temperature: 18.2��C, Humidity: 53.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1630949) uart_Test: Received 81 bytes: Temperature: 18.2��C, Humidity: 52.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1632949) uart_Test: Received 81 bytes: Temperature: 18.2��C, Humidity: 53.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1635049) uart_Test: Received 81 bytes: Temperature: 18.2��C, Humidity: 53.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1637049) uart_Test: Received 81 bytes: Temperature: 18.2��C, Humidity: 53.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1639049) uart_Test: Received 81 bytes: Temperature: 18.2��C, Humidity: 53.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1641149) uart_Test: Received 81 bytes: Temperature: 18.2��C, Humidity: 53.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1643149) uart_Test: Received 81 bytes: Temperature: 18.2��C, Humidity: 53.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1645149) uart_Test: Received 81 bytes: Temperature: 18.2��C, Humidity: 53.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1647249) uart_Test: Received 81 bytes: Temperature: 17.8��C, Humidity: 52.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1649249) uart_Test: Received 81 bytes: Temperature: 17.8��C, Humidity: 52.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1651249) uart_Test: Received 81 bytes: Temperature: 17.8��C, Humidity: 52.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1653349) uart_Test: Received 81 bytes: Temperature: 17.8��C, Humidity: 52.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1655349) uart_Test: Received 81 bytes: Temperature: 17.8��C, Humidity: 52.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1657349) uart_Test: Received 81 bytes: Temperature: 17.8��C, Humidity: 52.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1659449) uart_Test: Received 81 bytes: Temperature: 17.8��C, Humidity: 53.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1661449) uart_Test: Received 81 bytes: Temperature: 17.8��C, Humidity: 53.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1663449) uart_Test: Received 81 bytes: Temperature: 17.8��C, Humidity: 53.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1665549) uart_Test: Received 81 bytes: Temperature: 17.8��C, Humidity: 53.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1667549) uart_Test: Received 81 bytes: Temperature: 17.8��C, Humidity: 53.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1669549) uart_Test: Received 81 bytes: Temperature: 17.4��C, Humidity: 53.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1671649) uart_Test: Received 81 bytes: Temperature: 17.4��C, Humidity: 53.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1673649) uart_Test: Received 81 bytes: Temperature: 17.4��C, Humidity: 53.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1675649) uart_Test: Received 81 bytes: Temperature: 17.4��C, Humidity: 53.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1677749) uart_Test: Received 81 bytes: Temperature: 17.4��C, Humidity: 53.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1679749) uart_Test: Received 81 bytes: Temperature: 17.4��C, Humidity: 53.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1681749) uart_Test: Received 81 bytes: Temperature: 17.4��C, Humidity: 53.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1683849) uart_Test: Received 81 bytes: Temperature: 17.4��C, Humidity: 53.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1685849) uart_Test: Received 81 bytes: Temperature: 17.4��C, Humidity: 53.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1687849) uart_Test: Received 81 bytes: Temperature: 17.4��C, Humidity: 53.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1689949) uart_Test: Received 81 bytes: Temperature: 17.4��C, Humidity: 53.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1691949) uart_Test: Received 81 bytes: Temperature: 17.4��C, Humidity: 54.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1693949) uart_Test: Received 81 bytes: Temperature: 17.4��C, Humidity: 53.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1696049) uart_Test: Received 81 bytes: Temperature: 17.4��C, Humidity: 53.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1698049) uart_Test: Received 81 bytes: Temperature: 17.4��C, Humidity: 54.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1700049) uart_Test: Received 81 bytes: Temperature: 17.4��C, Humidity: 54.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1702149) uart_Test: Received 81 bytes: Temperature: 17.4��C, Humidity: 54.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1704149) uart_Test: Received 81 bytes: Temperature: 17.4��C, Humidity: 54.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1706149) uart_Test: Received 81 bytes: Temperature: 17.4��C, Humidity: 54.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1708249) uart_Test: Received 81 bytes: Temperature: 17.4��C, Humidity: 54.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1710249) uart_Test: Received 81 bytes: Temperature: 17.4��C, Humidity: 54.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1712249) uart_Test: Received 81 bytes: Temperature: 17.4��C, Humidity: 54.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1714349) uart_Test: Received 81 bytes: Temperature: 17.4��C, Humidity: 54.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1716349) uart_Test: Received 81 bytes: Temperature: 17.4��C, Humidity: 54.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1718349) uart_Test: Received 81 bytes: Temperature: 17.4��C, Humidity: 54.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1720449) uart_Test: Received 81 bytes: Temperature: 17.4��C, Humidity: 54.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1722449) uart_Test: Received 81 bytes: Temperature: 17.4��C, Humidity: 54.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1724449) uart_Test: Received 81 bytes: Temperature: 17.4��C, Humidity: 54.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1726549) uart_Test: Received 81 bytes: Temperature: 17.4��C, Humidity: 54.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1728549) uart_Test: Received 81 bytes: Temperature: 17.4��C, Humidity: 54.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1730549) uart_Test: Received 81 bytes: Temperature: 17.4��C, Humidity: 54.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1732649) uart_Test: Received 81 bytes: Temperature: 17.4��C, Humidity: 54.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1734649) uart_Test: Received 81 bytes: Temperature: 17.4��C, Humidity: 54.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1736649) uart_Test: Received 81 bytes: Temperature: 17.4��C, Humidity: 54.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1738749) uart_Test: Received 81 bytes: Temperature: 17.4��C, Humidity: 54.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1740749) uart_Test: Received 81 bytes: Temperature: 17.4��C, Humidity: 54.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1742749) uart_Test: Received 81 bytes: Temperature: 17.4��C, Humidity: 54.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1744849) uart_Test: Received 81 bytes: Temperature: 17.4��C, Humidity: 54.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1746849) uart_Test: Received 81 bytes: Temperature: 17.4��C, Humidity: 54.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1748849) uart_Test: Received 81 bytes: Temperature: 17.4��C, Humidity: 54.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1750949) uart_Test: Received 81 bytes: Temperature: 17.4��C, Humidity: 54.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1752949) uart_Test: Received 81 bytes: Temperature: 17.4��C, Humidity: 54.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1754949) uart_Test: Received 81 bytes: Temperature: 17.4��C, Humidity: 54.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1757049) uart_Test: Received 81 bytes: Temperature: 17.4��C, Humidity: 54.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1759049) uart_Test: Received 81 bytes: Temperature: 17.4��C, Humidity: 54.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1761049) uart_Test: Received 81 bytes: Temperature: 17.4��C, Humidity: 54.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1763149) uart_Test: Received 81 bytes: Temperature: 17.4��C, Humidity: 54.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1765149) uart_Test: Received 81 bytes: Temperature: 17.4��C, Humidity: 54.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1767149) uart_Test: Received 81 bytes: Temperature: 17.4��C, Humidity: 54.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1769249) uart_Test: Received 81 bytes: Temperature: 17.4��C, Humidity: 54.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1771249) uart_Test: Received 81 bytes: Temperature: 17.4��C, Humidity: 54.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1773249) uart_Test: Received 81 bytes: Temperature: 17.4��C, Humidity: 54.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1775349) uart_Test: Received 81 bytes: Temperature: 17.4��C, Humidity: 54.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1777349) uart_Test: Received 81 bytes: Temperature: 17.4��C, Humidity: 54.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1779349) uart_Test: Received 81 bytes: Temperature: 17.4��C, Humidity: 54.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1781449) uart_Test: Received 81 bytes: Temperature: 17.4��C, Humidity: 54.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1783449) uart_Test: Received 81 bytes: Temperature: 17.4��C, Humidity: 54.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1785449) uart_Test: Received 81 bytes: Temperature: 17.4��C, Humidity: 54.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1787549) uart_Test: Received 81 bytes: Temperature: 17.4��C, Humidity: 54.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1789549) uart_Test: Received 81 bytes: Temperature: 17.4��C, Humidity: 54.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1791549) uart_Test: Received 81 bytes: Temperature: 17.4��C, Humidity: 54.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1793649) uart_Test: Received 81 bytes: Temperature: 17.4��C, Humidity: 54.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1795649) uart_Test: Received 81 bytes: Temperature: 17.4��C, Humidity: 54.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1797649) uart_Test: Received 81 bytes: Temperature: 17.4��C, Humidity: 54.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1799749) uart_Test: Received 81 bytes: Temperature: 17.4��C, Humidity: 54.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1801749) uart_Test: Received 81 bytes: Temperature: 17.4��C, Humidity: 54.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1803749) uart_Test: Received 81 bytes: Temperature: 17.4��C, Humidity: 54.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1805849) uart_Test: Received 81 bytes: Temperature: 17.4��C, Humidity: 54.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1807849) uart_Test: Received 81 bytes: Temperature: 17.4��C, Humidity: 54.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1809849) uart_Test: Received 81 bytes: Temperature: 17.4��C, Humidity: 54.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1811949) uart_Test: Received 81 bytes: Temperature: 17.4��C, Humidity: 54.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1813949) uart_Test: Received 81 bytes: Temperature: 17.4��C, Humidity: 54.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1815949) uart_Test: Received 81 bytes: Temperature: 17.5��C, Humidity: 54.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1818049) uart_Test: Received 81 bytes: Temperature: 17.8��C, Humidity: 54.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1820049) uart_Test: Received 81 bytes: Temperature: 17.8��C, Humidity: 54.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1822049) uart_Test: Received 81 bytes: Temperature: 17.8��C, Humidity: 54.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1824049) uart_Test: Received 81 bytes: Temperature: 17.8��C, Humidity: 54.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1826149) uart_Test: Received 81 bytes: Temperature: 17.4��C, Humidity: 54.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1828149) uart_Test: Received 81 bytes: Temperature: 17.4��C, Humidity: 54.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1830149) uart_Test: Received 81 bytes: Temperature: 17.4��C, Humidity: 54.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1832249) uart_Test: Received 81 bytes: Temperature: 17.4��C, Humidity: 54.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1834249) uart_Test: Received 81 bytes: Temperature: 17.4��C, Humidity: 54.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1836249) uart_Test: Received 81 bytes: Temperature: 17.4��C, Humidity: 53.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1838349) uart_Test: Received 81 bytes: Temperature: 17.4��C, Humidity: 53.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1840349) uart_Test: Received 81 bytes: Temperature: 17.4��C, Humidity: 53.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1842349) uart_Test: Received 81 bytes: Temperature: 17.4��C, Humidity: 53.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1844449) uart_Test: Received 81 bytes: Temperature: 17.4��C, Humidity: 53.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1846449) uart_Test: Received 81 bytes: Temperature: 17.4��C, Humidity: 53.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1848449) uart_Test: Received 81 bytes: Temperature: 17.4��C, Humidity: 53.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1850549) uart_Test: Received 81 bytes: Temperature: 17.4��C, Humidity: 54.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1852549) uart_Test: Received 81 bytes: Temperature: 17.4��C, Humidity: 54.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1854549) uart_Test: Received 81 bytes: Temperature: 17.4��C, Humidity: 54.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1856649) uart_Test: Received 81 bytes: Temperature: 17.4��C, Humidity: 53.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1858649) uart_Test: Received 81 bytes: Temperature: 17.4��C, Humidity: 53.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1860649) uart_Test: Received 81 bytes: Temperature: 17.4��C, Humidity: 54.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1862749) uart_Test: Received 81 bytes: Temperature: 17.4��C, Humidity: 54.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1864749) uart_Test: Received 81 bytes: Temperature: 17.4��C, Humidity: 54.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1866749) uart_Test: Received 81 bytes: Temperature: 17.4��C, Humidity: 54.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1868849) uart_Test: Received 81 bytes: Temperature: 17.4��C, Humidity: 54.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1870849) uart_Test: Received 81 bytes: Temperature: 17.4��C, Humidity: 54.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1872849) uart_Test: Received 81 bytes: Temperature: 17.4��C, Humidity: 54.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1874949) uart_Test: Received 81 bytes: Temperature: 17.4��C, Humidity: 54.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1876949) uart_Test: Received 81 bytes: Temperature: 17.4��C, Humidity: 54.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1878949) uart_Test: Received 81 bytes: Temperature: 17.4��C, Humidity: 54.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1881049) uart_Test: Received 81 bytes: Temperature: 17.4��C, Humidity: 54.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1883049) uart_Test: Received 81 bytes: Temperature: 17.4��C, Humidity: 54.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1885049) uart_Test: Received 81 bytes: Temperature: 17.4��C, Humidity: 54.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1887149) uart_Test: Received 81 bytes: Temperature: 17.4��C, Humidity: 54.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1889149) uart_Test: Received 81 bytes: Temperature: 17.4��C, Humidity: 54.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1891149) uart_Test: Received 81 bytes: Temperature: 17.4��C, Humidity: 54.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1893249) uart_Test: Received 81 bytes: Temperature: 17.4��C, Humidity: 54.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1895249) uart_Test: Received 81 bytes: Temperature: 17.4��C, Humidity: 54.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1897249) uart_Test: Received 81 bytes: Temperature: 17.4��C, Humidity: 54.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1899349) uart_Test: Received 81 bytes: Temperature: 17.4��C, Humidity: 54.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1901349) uart_Test: Received 81 bytes: Temperature: 17.4��C, Humidity: 54.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1903349) uart_Test: Received 81 bytes: Temperature: 17.4��C, Humidity: 54.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1905449) uart_Test: Received 81 bytes: Temperature: 17.4��C, Humidity: 54.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1907449) uart_Test: Received 81 bytes: Temperature: 17.4��C, Humidity: 54.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1909449) uart_Test: Received 81 bytes: Temperature: 17.4��C, Humidity: 54.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1911549) uart_Test: Received 81 bytes: Temperature: 17.4��C, Humidity: 54.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1913549) uart_Test: Received 81 bytes: Temperature: 17.4��C, Humidity: 54.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1915549) uart_Test: Received 81 bytes: Temperature: 17.4��C, Humidity: 53.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1917649) uart_Test: Received 81 bytes: Temperature: 17.4��C, Humidity: 53.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1919649) uart_Test: Received 81 bytes: Temperature: 17.4��C, Humidity: 53.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1921649) uart_Test: Received 81 bytes: Temperature: 17.4��C, Humidity: 53.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1923749) uart_Test: Received 81 bytes: Temperature: 17.4��C, Humidity: 53.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1925749) uart_Test: Received 81 bytes: Temperature: 17.4��C, Humidity: 53.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1927749) uart_Test: Received 81 bytes: Temperature: 17.4��C, Humidity: 53.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1929849) uart_Test: Received 81 bytes: Temperature: 17.4��C, Humidity: 53.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1931849) uart_Test: Received 81 bytes: Temperature: 17.4��C, Humidity: 53.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1933849) uart_Test: Received 81 bytes: Temperature: 17.4��C, Humidity: 53.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1935949) uart_Test: Received 81 bytes: Temperature: 17.4��C, Humidity: 53.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1937949) uart_Test: Received 81 bytes: Temperature: 17.4��C, Humidity: 53.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1939949) uart_Test: Received 81 bytes: Temperature: 17.4��C, Humidity: 53.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1942049) uart_Test: Received 81 bytes: Temperature: 17.4��C, Humidity: 53.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1944049) uart_Test: Received 81 bytes: Temperature: 17.4��C, Humidity: 53.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1946049) uart_Test: Received 81 bytes: Temperature: 17.4��C, Humidity: 53.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1948149) uart_Test: Received 81 bytes: Temperature: 17.4��C, Humidity: 53.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1950149) uart_Test: Received 81 bytes: Temperature: 17.4��C, Humidity: 53.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1952149) uart_Test: Received 81 bytes: Temperature: 17.4��C, Humidity: 53.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1954249) uart_Test: Received 81 bytes: Temperature: 17.4��C, Humidity: 54.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1956249) uart_Test: Received 81 bytes: Temperature: 17.4��C, Humidity: 54.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1958249) uart_Test: Received 81 bytes: Temperature: 17.4��C, Humidity: 54.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1960349) uart_Test: Received 81 bytes: Temperature: 17.4��C, Humidity: 54.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1962349) uart_Test: Received 81 bytes: Temperature: 17.4��C, Humidity: 54.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1964349) uart_Test: Received 81 bytes: Temperature: 17.4��C, Humidity: 54.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1966449) uart_Test: Received 81 bytes: Temperature: 17.4��C, Humidity: 54.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1968449) uart_Test: Received 81 bytes: Temperature: 17.4��C, Humidity: 54.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1970449) uart_Test: Received 81 bytes: Temperature: 17.4��C, Humidity: 54.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1972549) uart_Test: Received 81 bytes: Temperature: 17.4��C, Humidity: 54.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1974549) uart_Test: Received 81 bytes: Temperature: 17.4��C, Humidity: 54.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1976549) uart_Test: Received 81 bytes: Temperature: 17.4��C, Humidity: 54.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1978649) uart_Test: Received 81 bytes: Temperature: 17.4��C, Humidity: 54.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1980649) uart_Test: Received 81 bytes: Temperature: 17.4��C, Humidity: 53.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1982649) uart_Test: Received 81 bytes: Temperature: 17.4��C, Humidity: 53.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1984749) uart_Test: Received 81 bytes: Temperature: 17.4��C, Humidity: 53.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1986749) uart_Test: Received 81 bytes: Temperature: 17.4��C, Humidity: 53.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1988749) uart_Test: Received 81 bytes: Temperature: 17.4��C, Humidity: 53.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1990849) uart_Test: Received 81 bytes: Temperature: 17.4��C, Humidity: 53.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1992849) uart_Test: Received 81 bytes: Temperature: 17.4��C, Humidity: 53.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1994849) uart_Test: Received 81 bytes: Temperature: 17.4��C, Humidity: 53.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1996949) uart_Test: Received 81 bytes: Temperature: 17.4��C, Humidity: 53.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (1998949) uart_Test: Received 81 bytes: Temperature: 17.4��C, Humidity: 53.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2000949) uart_Test: Received 81 bytes: Temperature: 17.4��C, Humidity: 53.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2003049) uart_Test: Received 81 bytes: Temperature: 17.4��C, Humidity: 53.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2005049) uart_Test: Received 81 bytes: Temperature: 17.4��C, Humidity: 53.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2007049) uart_Test: Received 81 bytes: Temperature: 17.4��C, Humidity: 53.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2009149) uart_Test: Received 81 bytes: Temperature: 17.4��C, Humidity: 53.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2011149) uart_Test: Received 81 bytes: Temperature: 17.4��C, Humidity: 53.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2013149) uart_Test: Received 81 bytes: Temperature: 17.4��C, Humidity: 53.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2015249) uart_Test: Received 81 bytes: Temperature: 17.0��C, Humidity: 53.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2017249) uart_Test: Received 81 bytes: Temperature: 17.0��C, Humidity: 53.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2019249) uart_Test: Received 81 bytes: Temperature: 17.0��C, Humidity: 53.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2021349) uart_Test: Received 81 bytes: Temperature: 17.0��C, Humidity: 53.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2023349) uart_Test: Received 81 bytes: Temperature: 17.0��C, Humidity: 54.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2025349) uart_Test: Received 81 bytes: Temperature: 17.0��C, Humidity: 54.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2027349) uart_Test: Received 81 bytes: Temperature: 17.0��C, Humidity: 54.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2029449) uart_Test: Received 81 bytes: Temperature: 17.0��C, Humidity: 54.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2031449) uart_Test: Received 81 bytes: Temperature: 17.0��C, Humidity: 54.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2033449) uart_Test: Received 81 bytes: Temperature: 17.0��C, Humidity: 54.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2035549) uart_Test: Received 81 bytes: Temperature: 17.0��C, Humidity: 54.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2037549) uart_Test: Received 81 bytes: Temperature: 17.0��C, Humidity: 54.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2039549) uart_Test: Received 81 bytes: Temperature: 17.0��C, Humidity: 54.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2041649) uart_Test: Received 81 bytes: Temperature: 17.0��C, Humidity: 54.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2043649) uart_Test: Received 81 bytes: Temperature: 17.0��C, Humidity: 54.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2045649) uart_Test: Received 81 bytes: Temperature: 17.0��C, Humidity: 54.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2047749) uart_Test: Received 81 bytes: Temperature: 17.0��C, Humidity: 54.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2049749) uart_Test: Received 81 bytes: Temperature: 17.0��C, Humidity: 54.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2051749) uart_Test: Received 81 bytes: Temperature: 17.0��C, Humidity: 54.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2053849) uart_Test: Received 81 bytes: Temperature: 17.0��C, Humidity: 54.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2055849) uart_Test: Received 81 bytes: Temperature: 17.0��C, Humidity: 54.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2057849) uart_Test: Received 81 bytes: Temperature: 17.0��C, Humidity: 54.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2059949) uart_Test: Received 81 bytes: Temperature: 17.0��C, Humidity: 54.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2061949) uart_Test: Received 81 bytes: Temperature: 17.0��C, Humidity: 54.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2063949) uart_Test: Received 81 bytes: Temperature: 17.0��C, Humidity: 54.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2066049) uart_Test: Received 81 bytes: Temperature: 17.0��C, Humidity: 54.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2068049) uart_Test: Received 81 bytes: Temperature: 17.0��C, Humidity: 54.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2070049) uart_Test: Received 81 bytes: Temperature: 17.0��C, Humidity: 54.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2072149) uart_Test: Received 81 bytes: Temperature: 17.0��C, Humidity: 54.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2074149) uart_Test: Received 81 bytes: Temperature: 17.0��C, Humidity: 54.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2076149) uart_Test: Received 81 bytes: Temperature: 17.0��C, Humidity: 54.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2078249) uart_Test: Received 81 bytes: Temperature: 17.0��C, Humidity: 54.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2080249) uart_Test: Received 81 bytes: Temperature: 17.0��C, Humidity: 54.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2082249) uart_Test: Received 81 bytes: Temperature: 17.0��C, Humidity: 54.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2084349) uart_Test: Received 81 bytes: Temperature: 17.0��C, Humidity: 54.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2086349) uart_Test: Received 81 bytes: Temperature: 17.0��C, Humidity: 54.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2088349) uart_Test: Received 81 bytes: Temperature: 17.0��C, Humidity: 54.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2090449) uart_Test: Received 81 bytes: Temperature: 17.0��C, Humidity: 54.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2092449) uart_Test: Received 81 bytes: Temperature: 17.0��C, Humidity: 54.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2094449) uart_Test: Received 81 bytes: Temperature: 17.0��C, Humidity: 54.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2096549) uart_Test: Received 81 bytes: Temperature: 17.0��C, Humidity: 54.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2098549) uart_Test: Received 81 bytes: Temperature: 17.0��C, Humidity: 54.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2100549) uart_Test: Received 81 bytes: Temperature: 17.0��C, Humidity: 54.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2102649) uart_Test: Received 81 bytes: Temperature: 17.0��C, Humidity: 54.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2104649) uart_Test: Received 81 bytes: Temperature: 17.0��C, Humidity: 54.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2106649) uart_Test: Received 81 bytes: Temperature: 17.0��C, Humidity: 54.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2108749) uart_Test: Received 81 bytes: Temperature: 17.0��C, Humidity: 54.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2110749) uart_Test: Received 81 bytes: Temperature: 17.0��C, Humidity: 54.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2112749) uart_Test: Received 81 bytes: Temperature: 17.0��C, Humidity: 54.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2114849) uart_Test: Received 81 bytes: Temperature: 17.0��C, Humidity: 54.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2116849) uart_Test: Received 81 bytes: Temperature: 17.0��C, Humidity: 54.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2118849) uart_Test: Received 81 bytes: Temperature: 17.0��C, Humidity: 54.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2120949) uart_Test: Received 81 bytes: Temperature: 17.0��C, Humidity: 54.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2122949) uart_Test: Received 81 bytes: Temperature: 17.0��C, Humidity: 54.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2124949) uart_Test: Received 81 bytes: Temperature: 17.0��C, Humidity: 54.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2127049) uart_Test: Received 81 bytes: Temperature: 17.0��C, Humidity: 54.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2129049) uart_Test: Received 81 bytes: Temperature: 17.0��C, Humidity: 54.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2131049) uart_Test: Received 81 bytes: Temperature: 17.0��C, Humidity: 54.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2133149) uart_Test: Received 81 bytes: Temperature: 17.0��C, Humidity: 54.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2135149) uart_Test: Received 81 bytes: Temperature: 16.6��C, Humidity: 54.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2137149) uart_Test: Received 81 bytes: Temperature: 16.6��C, Humidity: 54.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2139249) uart_Test: Received 81 bytes: Temperature: 16.6��C, Humidity: 54.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2141249) uart_Test: Received 81 bytes: Temperature: 16.6��C, Humidity: 54.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2143249) uart_Test: Received 81 bytes: Temperature: 16.6��C, Humidity: 54.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2145349) uart_Test: Received 81 bytes: Temperature: 16.6��C, Humidity: 54.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2147349) uart_Test: Received 81 bytes: Temperature: 16.6��C, Humidity: 54.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2149349) uart_Test: Received 81 bytes: Temperature: 16.6��C, Humidity: 54.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2151449) uart_Test: Received 81 bytes: Temperature: 16.6��C, Humidity: 54.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2153449) uart_Test: Received 81 bytes: Temperature: 16.6��C, Humidity: 54.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2155449) uart_Test: Received 81 bytes: Temperature: 16.6��C, Humidity: 54.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2157549) uart_Test: Received 81 bytes: Temperature: 16.6��C, Humidity: 54.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2159549) uart_Test: Received 81 bytes: Temperature: 16.6��C, Humidity: 54.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2161549) uart_Test: Received 81 bytes: Temperature: 16.6��C, Humidity: 54.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2163649) uart_Test: Received 81 bytes: Temperature: 16.6��C, Humidity: 54.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2165649) uart_Test: Received 81 bytes: Temperature: 16.6��C, Humidity: 54.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2167649) uart_Test: Received 81 bytes: Temperature: 16.6��C, Humidity: 54.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2169749) uart_Test: Received 81 bytes: Temperature: 16.6��C, Humidity: 54.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2171749) uart_Test: Received 81 bytes: Temperature: 16.6��C, Humidity: 54.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2173749) uart_Test: Received 81 bytes: Temperature: 16.6��C, Humidity: 54.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2175849) uart_Test: Received 81 bytes: Temperature: 16.6��C, Humidity: 54.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2177849) uart_Test: Received 81 bytes: Temperature: 16.6��C, Humidity: 55.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2179849) uart_Test: Received 81 bytes: Temperature: 16.6��C, Humidity: 55.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2181949) uart_Test: Received 81 bytes: Temperature: 16.6��C, Humidity: 55.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2183949) uart_Test: Received 81 bytes: Temperature: 16.6��C, Humidity: 55.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2185949) uart_Test: Received 81 bytes: Temperature: 16.6��C, Humidity: 55.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2188049) uart_Test: Received 81 bytes: Temperature: 16.6��C, Humidity: 55.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2190049) uart_Test: Received 81 bytes: Temperature: 16.6��C, Humidity: 55.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2192049) uart_Test: Received 81 bytes: Temperature: 16.6��C, Humidity: 55.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2194149) uart_Test: Received 81 bytes: Temperature: 16.6��C, Humidity: 55.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2196149) uart_Test: Received 81 bytes: Temperature: 16.6��C, Humidity: 55.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2198149) uart_Test: Received 81 bytes: Temperature: 16.6��C, Humidity: 55.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2200249) uart_Test: Received 81 bytes: Temperature: 16.6��C, Humidity: 55.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2202249) uart_Test: Received 81 bytes: Temperature: 16.6��C, Humidity: 55.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2204249) uart_Test: Received 81 bytes: Temperature: 16.6��C, Humidity: 55.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2206349) uart_Test: Received 81 bytes: Temperature: 16.6��C, Humidity: 55.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2208349) uart_Test: Received 81 bytes: Temperature: 16.6��C, Humidity: 55.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2210349) uart_Test: Received 81 bytes: Temperature: 16.6��C, Humidity: 55.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2212449) uart_Test: Received 81 bytes: Temperature: 16.6��C, Humidity: 55.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2214449) uart_Test: Received 81 bytes: Temperature: 16.6��C, Humidity: 55.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2216449) uart_Test: Received 81 bytes: Temperature: 16.6��C, Humidity: 55.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2218549) uart_Test: Received 81 bytes: Temperature: 16.6��C, Humidity: 55.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2220549) uart_Test: Received 81 bytes: Temperature: 16.6��C, Humidity: 55.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2222549) uart_Test: Received 81 bytes: Temperature: 16.6��C, Humidity: 55.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2224649) uart_Test: Received 81 bytes: Temperature: 16.6��C, Humidity: 55.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2226649) uart_Test: Received 81 bytes: Temperature: 16.6��C, Humidity: 55.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2228649) uart_Test: Received 81 bytes: Temperature: 16.6��C, Humidity: 55.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2230649) uart_Test: Received 81 bytes: Temperature: 16.6��C, Humidity: 55.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2232749) uart_Test: Received 81 bytes: Temperature: 16.6��C, Humidity: 55.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2234749) uart_Test: Received 81 bytes: Temperature: 16.6��C, Humidity: 55.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2236749) uart_Test: Received 81 bytes: Temperature: 16.6��C, Humidity: 55.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2238849) uart_Test: Received 81 bytes: Temperature: 16.6��C, Humidity: 55.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2240849) uart_Test: Received 81 bytes: Temperature: 16.6��C, Humidity: 55.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2242849) uart_Test: Received 81 bytes: Temperature: 16.6��C, Humidity: 55.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2244949) uart_Test: Received 81 bytes: Temperature: 16.6��C, Humidity: 55.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2246949) uart_Test: Received 81 bytes: Temperature: 16.6��C, Humidity: 55.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2248949) uart_Test: Received 81 bytes: Temperature: 16.6��C, Humidity: 55.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2251049) uart_Test: Received 81 bytes: Temperature: 16.6��C, Humidity: 55.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2253049) uart_Test: Received 81 bytes: Temperature: 16.6��C, Humidity: 55.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2255049) uart_Test: Received 81 bytes: Temperature: 16.6��C, Humidity: 55.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2257149) uart_Test: Received 81 bytes: Temperature: 16.6��C, Humidity: 55.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2259149) uart_Test: Received 81 bytes: Temperature: 16.6��C, Humidity: 55.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2261149) uart_Test: Received 81 bytes: Temperature: 16.6��C, Humidity: 55.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2263249) uart_Test: Received 81 bytes: Temperature: 16.6��C, Humidity: 55.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2265249) uart_Test: Received 81 bytes: Temperature: 16.6��C, Humidity: 55.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2267249) uart_Test: Received 81 bytes: Temperature: 16.6��C, Humidity: 55.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2269349) uart_Test: Received 81 bytes: Temperature: 16.6��C, Humidity: 55.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2271349) uart_Test: Received 81 bytes: Temperature: 16.6��C, Humidity: 55.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2273349) uart_Test: Received 81 bytes: Temperature: 16.6��C, Humidity: 55.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2275449) uart_Test: Received 81 bytes: Temperature: 16.6��C, Humidity: 55.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2277449) uart_Test: Received 81 bytes: Temperature: 16.6��C, Humidity: 55.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2279449) uart_Test: Received 81 bytes: Temperature: 16.6��C, Humidity: 55.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2281549) uart_Test: Received 81 bytes: Temperature: 16.6��C, Humidity: 55.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2283549) uart_Test: Received 81 bytes: Temperature: 16.6��C, Humidity: 55.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2285549) uart_Test: Received 81 bytes: Temperature: 16.6��C, Humidity: 55.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2287649) uart_Test: Received 81 bytes: Temperature: 16.6��C, Humidity: 55.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2289649) uart_Test: Received 81 bytes: Temperature: 16.6��C, Humidity: 55.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2291649) uart_Test: Received 81 bytes: Temperature: 16.6��C, Humidity: 55.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2293749) uart_Test: Received 81 bytes: Temperature: 16.6��C, Humidity: 55.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2295749) uart_Test: Received 81 bytes: Temperature: 17.0��C, Humidity: 55.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2297749) uart_Test: Received 81 bytes: Temperature: 17.0��C, Humidity: 55.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2299849) uart_Test: Received 81 bytes: Temperature: 17.0��C, Humidity: 55.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2301849) uart_Test: Received 81 bytes: Temperature: 17.0��C, Humidity: 55.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2303849) uart_Test: Received 81 bytes: Temperature: 17.0��C, Humidity: 55.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2305949) uart_Test: Received 81 bytes: Temperature: 17.0��C, Humidity: 55.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2307949) uart_Test: Received 81 bytes: Temperature: 17.0��C, Humidity: 55.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2309949) uart_Test: Received 81 bytes: Temperature: 17.0��C, Humidity: 55.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2312049) uart_Test: Received 81 bytes: Temperature: 17.0��C, Humidity: 55.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2314049) uart_Test: Received 81 bytes: Temperature: 17.0��C, Humidity: 55.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2316049) uart_Test: Received 81 bytes: Temperature: 17.0��C, Humidity: 55.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2318149) uart_Test: Received 81 bytes: Temperature: 17.0��C, Humidity: 55.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2320149) uart_Test: Received 81 bytes: Temperature: 17.0��C, Humidity: 55.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2322149) uart_Test: Received 81 bytes: Temperature: 17.0��C, Humidity: 55.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2324249) uart_Test: Received 81 bytes: Temperature: 17.0��C, Humidity: 55.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2326249) uart_Test: Received 81 bytes: Temperature: 17.0��C, Humidity: 55.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2328249) uart_Test: Received 81 bytes: Temperature: 17.0��C, Humidity: 55.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2330349) uart_Test: Received 81 bytes: Temperature: 17.0��C, Humidity: 55.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2332349) uart_Test: Received 81 bytes: Temperature: 17.0��C, Humidity: 55.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2334349) uart_Test: Received 81 bytes: Temperature: 17.0��C, Humidity: 55.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2336449) uart_Test: Received 81 bytes: Temperature: 17.0��C, Humidity: 55.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2338449) uart_Test: Received 81 bytes: Temperature: 17.0��C, Humidity: 55.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2340449) uart_Test: Received 81 bytes: Temperature: 17.0��C, Humidity: 55.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2342549) uart_Test: Received 81 bytes: Temperature: 17.0��C, Humidity: 55.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2344549) uart_Test: Received 81 bytes: Temperature: 17.0��C, Humidity: 55.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2346549) uart_Test: Received 81 bytes: Temperature: 17.0��C, Humidity: 55.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2348649) uart_Test: Received 81 bytes: Temperature: 17.0��C, Humidity: 55.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2350649) uart_Test: Received 81 bytes: Temperature: 17.0��C, Humidity: 55.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2352649) uart_Test: Received 81 bytes: Temperature: 17.0��C, Humidity: 55.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2354749) uart_Test: Received 81 bytes: Temperature: 17.0��C, Humidity: 55.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2356749) uart_Test: Received 81 bytes: Temperature: 17.0��C, Humidity: 55.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2358749) uart_Test: Received 81 bytes: Temperature: 17.0��C, Humidity: 55.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2360849) uart_Test: Received 81 bytes: Temperature: 17.0��C, Humidity: 55.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2362849) uart_Test: Received 81 bytes: Temperature: 17.0��C, Humidity: 55.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2364849) uart_Test: Received 81 bytes: Temperature: 17.0��C, Humidity: 55.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2366949) uart_Test: Received 81 bytes: Temperature: 17.0��C, Humidity: 55.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2368949) uart_Test: Received 81 bytes: Temperature: 16.6��C, Humidity: 55.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2370949) uart_Test: Received 81 bytes: Temperature: 16.6��C, Humidity: 55.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2373049) uart_Test: Received 81 bytes: Temperature: 16.6��C, Humidity: 55.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2375049) uart_Test: Received 81 bytes: Temperature: 16.6��C, Humidity: 55.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2377049) uart_Test: Received 81 bytes: Temperature: 16.6��C, Humidity: 55.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2379149) uart_Test: Received 81 bytes: Temperature: 16.6��C, Humidity: 55.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2381149) uart_Test: Received 81 bytes: Temperature: 16.6��C, Humidity: 55.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2383149) uart_Test: Received 81 bytes: Temperature: 16.6��C, Humidity: 55.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2385249) uart_Test: Received 81 bytes: Temperature: 16.6��C, Humidity: 55.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2387249) uart_Test: Received 81 bytes: Temperature: 16.6��C, Humidity: 55.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2389249) uart_Test: Received 81 bytes: Temperature: 16.6��C, Humidity: 55.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2391349) uart_Test: Received 81 bytes: Temperature: 16.6��C, Humidity: 55.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2393349) uart_Test: Received 81 bytes: Temperature: 16.6��C, Humidity: 55.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2395349) uart_Test: Received 81 bytes: Temperature: 16.6��C, Humidity: 55.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2397449) uart_Test: Received 81 bytes: Temperature: 16.6��C, Humidity: 55.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2399449) uart_Test: Received 81 bytes: Temperature: 16.6��C, Humidity: 55.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2401449) uart_Test: Received 81 bytes: Temperature: 16.6��C, Humidity: 55.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2403549) uart_Test: Received 81 bytes: Temperature: 16.6��C, Humidity: 55.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2405549) uart_Test: Received 81 bytes: Temperature: 16.6��C, Humidity: 55.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2407549) uart_Test: Received 81 bytes: Temperature: 16.6��C, Humidity: 55.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2409649) uart_Test: Received 81 bytes: Temperature: 16.6��C, Humidity: 55.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2411649) uart_Test: Received 81 bytes: Temperature: 16.6��C, Humidity: 55.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2413649) uart_Test: Received 81 bytes: Temperature: 16.6��C, Humidity: 55.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2415749) uart_Test: Received 81 bytes: Temperature: 16.6��C, Humidity: 55.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2417749) uart_Test: Received 81 bytes: Temperature: 16.6��C, Humidity: 55.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2419749) uart_Test: Received 81 bytes: Temperature: 16.6��C, Humidity: 55.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2421849) uart_Test: Received 81 bytes: Temperature: 16.6��C, Humidity: 56.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2423849) uart_Test: Received 81 bytes: Temperature: 16.6��C, Humidity: 56.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2425849) uart_Test: Received 81 bytes: Temperature: 16.6��C, Humidity: 56.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2427949) uart_Test: Received 81 bytes: Temperature: 16.6��C, Humidity: 56.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2429949) uart_Test: Received 81 bytes: Temperature: 16.6��C, Humidity: 56.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2431949) uart_Test: Received 81 bytes: Temperature: 16.6��C, Humidity: 57.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2433949) uart_Test: Received 81 bytes: Temperature: 16.6��C, Humidity: 57.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2436049) uart_Test: Received 81 bytes: Temperature: 16.6��C, Humidity: 57.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2438049) uart_Test: Received 81 bytes: Temperature: 16.6��C, Humidity: 57.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2440049) uart_Test: Received 81 bytes: Temperature: 16.6��C, Humidity: 57.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2442149) uart_Test: Received 81 bytes: Temperature: 16.6��C, Humidity: 57.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2444149) uart_Test: Received 81 bytes: Temperature: 16.6��C, Humidity: 57.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2446149) uart_Test: Received 81 bytes: Temperature: 16.6��C, Humidity: 57.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2448249) uart_Test: Received 81 bytes: Temperature: 16.6��C, Humidity: 57.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2450249) uart_Test: Received 81 bytes: Temperature: 16.6��C, Humidity: 57.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2452249) uart_Test: Received 81 bytes: Temperature: 16.6��C, Humidity: 57.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2454349) uart_Test: Received 81 bytes: Temperature: 17.0��C, Humidity: 57.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2456349) uart_Test: Received 81 bytes: Temperature: 17.0��C, Humidity: 57.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2458349) uart_Test: Received 81 bytes: Temperature: 17.0��C, Humidity: 57.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2460449) uart_Test: Received 81 bytes: Temperature: 17.0��C, Humidity: 57.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2462449) uart_Test: Received 81 bytes: Temperature: 17.0��C, Humidity: 57.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2464449) uart_Test: Received 81 bytes: Temperature: 17.0��C, Humidity: 57.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2466549) uart_Test: Received 81 bytes: Temperature: 17.0��C, Humidity: 57.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2468549) uart_Test: Received 81 bytes: Temperature: 17.0��C, Humidity: 57.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2470549) uart_Test: Received 81 bytes: Temperature: 17.0��C, Humidity: 57.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2472649) uart_Test: Received 81 bytes: Temperature: 17.0��C, Humidity: 57.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2474649) uart_Test: Received 81 bytes: Temperature: 17.0��C, Humidity: 57.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2476649) uart_Test: Received 81 bytes: Temperature: 17.0��C, Humidity: 57.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2478749) uart_Test: Received 81 bytes: Temperature: 17.0��C, Humidity: 57.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2480749) uart_Test: Received 81 bytes: Temperature: 17.0��C, Humidity: 57.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2482749) uart_Test: Received 81 bytes: Temperature: 17.0��C, Humidity: 57.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2484849) uart_Test: Received 81 bytes: Temperature: 17.0��C, Humidity: 57.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2486849) uart_Test: Received 81 bytes: Temperature: 17.0��C, Humidity: 57.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2488849) uart_Test: Received 81 bytes: Temperature: 17.0��C, Humidity: 57.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2490949) uart_Test: Received 81 bytes: Temperature: 17.0��C, Humidity: 57.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2492949) uart_Test: Received 81 bytes: Temperature: 17.0��C, Humidity: 57.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2494949) uart_Test: Received 81 bytes: Temperature: 17.0��C, Humidity: 57.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2497049) uart_Test: Received 81 bytes: Temperature: 17.0��C, Humidity: 57.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2499049) uart_Test: Received 81 bytes: Temperature: 17.0��C, Humidity: 57.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2501049) uart_Test: Received 81 bytes: Temperature: 17.0��C, Humidity: 56.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2503149) uart_Test: Received 81 bytes: Temperature: 17.0��C, Humidity: 56.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2505149) uart_Test: Received 81 bytes: Temperature: 17.1��C, Humidity: 56.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2507149) uart_Test: Received 81 bytes: Temperature: 17.0��C, Humidity: 56.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2509249) uart_Test: Received 81 bytes: Temperature: 17.0��C, Humidity: 56.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2511249) uart_Test: Received 81 bytes: Temperature: 17.0��C, Humidity: 56.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2513249) uart_Test: Received 81 bytes: Temperature: 17.0��C, Humidity: 56.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2515349) uart_Test: Received 81 bytes: Temperature: 17.0��C, Humidity: 56.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2517349) uart_Test: Received 81 bytes: Temperature: 17.0��C, Humidity: 56.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2519349) uart_Test: Received 81 bytes: Temperature: 17.0��C, Humidity: 56.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2521449) uart_Test: Received 81 bytes: Temperature: 17.0��C, Humidity: 56.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2523449) uart_Test: Received 81 bytes: Temperature: 17.0��C, Humidity: 56.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2525449) uart_Test: Received 81 bytes: Temperature: 17.0��C, Humidity: 56.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2527549) uart_Test: Received 81 bytes: Temperature: 17.0��C, Humidity: 56.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2529549) uart_Test: Received 81 bytes: Temperature: 17.0��C, Humidity: 56.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2531549) uart_Test: Received 81 bytes: Temperature: 17.0��C, Humidity: 56.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2533649) uart_Test: Received 81 bytes: Temperature: 17.0��C, Humidity: 56.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2535649) uart_Test: Received 81 bytes: Temperature: 17.0��C, Humidity: 55.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2537649) uart_Test: Received 81 bytes: Temperature: 16.6��C, Humidity: 55.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2539749) uart_Test: Received 81 bytes: Temperature: 16.6��C, Humidity: 55.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2541749) uart_Test: Received 81 bytes: Temperature: 16.6��C, Humidity: 55.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2543749) uart_Test: Received 81 bytes: Temperature: 16.6��C, Humidity: 55.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2545849) uart_Test: Received 81 bytes: Temperature: 16.6��C, Humidity: 55.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2547849) uart_Test: Received 81 bytes: Temperature: 16.6��C, Humidity: 56.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2549849) uart_Test: Received 81 bytes: Temperature: 16.6��C, Humidity: 56.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2551949) uart_Test: Received 81 bytes: Temperature: 16.6��C, Humidity: 56.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2553949) uart_Test: Received 81 bytes: Temperature: 16.6��C, Humidity: 56.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2555949) uart_Test: Received 81 bytes: Temperature: 16.6��C, Humidity: 56.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2558049) uart_Test: Received 81 bytes: Temperature: 16.6��C, Humidity: 57.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2560049) uart_Test: Received 81 bytes: Temperature: 16.6��C, Humidity: 57.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2562049) uart_Test: Received 81 bytes: Temperature: 16.6��C, Humidity: 57.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2564149) uart_Test: Received 81 bytes: Temperature: 16.6��C, Humidity: 57.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2566149) uart_Test: Received 81 bytes: Temperature: 16.6��C, Humidity: 57.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2568149) uart_Test: Received 81 bytes: Temperature: 16.6��C, Humidity: 57.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2570249) uart_Test: Received 81 bytes: Temperature: 16.6��C, Humidity: 57.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2572249) uart_Test: Received 81 bytes: Temperature: 16.9��C, Humidity: 57.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2574249) uart_Test: Received 81 bytes: Temperature: 17.0��C, Humidity: 57.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2576349) uart_Test: Received 81 bytes: Temperature: 17.0��C, Humidity: 57.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2578349) uart_Test: Received 81 bytes: Temperature: 17.0��C, Humidity: 57.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2580349) uart_Test: Received 81 bytes: Temperature: 17.0��C, Humidity: 57.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2582449) uart_Test: Received 81 bytes: Temperature: 17.0��C, Humidity: 57.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2584449) uart_Test: Received 81 bytes: Temperature: 17.0��C, Humidity: 57.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2586449) uart_Test: Received 81 bytes: Temperature: 17.0��C, Humidity: 57.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2588549) uart_Test: Received 81 bytes: Temperature: 17.0��C, Humidity: 57.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2590549) uart_Test: Received 81 bytes: Temperature: 17.0��C, Humidity: 57.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2592549) uart_Test: Received 81 bytes: Temperature: 17.0��C, Humidity: 57.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2594649) uart_Test: Received 81 bytes: Temperature: 17.0��C, Humidity: 57.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2596649) uart_Test: Received 81 bytes: Temperature: 17.4��C, Humidity: 57.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2598649) uart_Test: Received 81 bytes: Temperature: 17.4��C, Humidity: 57.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2600749) uart_Test: Received 81 bytes: Temperature: 17.4��C, Humidity: 57.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2602749) uart_Test: Received 81 bytes: Temperature: 17.4��C, Humidity: 57.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2604749) uart_Test: Received 81 bytes: Temperature: 17.4��C, Humidity: 57.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2606849) uart_Test: Received 81 bytes: Temperature: 17.4��C, Humidity: 56.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2608849) uart_Test: Received 81 bytes: Temperature: 17.4��C, Humidity: 56.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2610849) uart_Test: Received 81 bytes: Temperature: 17.4��C, Humidity: 56.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2612949) uart_Test: Received 81 bytes: Temperature: 17.4��C, Humidity: 56.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2614949) uart_Test: Received 81 bytes: Temperature: 17.4��C, Humidity: 56.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2616949) uart_Test: Received 81 bytes: Temperature: 17.4��C, Humidity: 56.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2619049) uart_Test: Received 81 bytes: Temperature: 17.4��C, Humidity: 56.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2621049) uart_Test: Received 81 bytes: Temperature: 17.4��C, Humidity: 56.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2623049) uart_Test: Received 81 bytes: Temperature: 17.4��C, Humidity: 56.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2625149) uart_Test: Received 81 bytes: Temperature: 17.4��C, Humidity: 56.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2627149) uart_Test: Received 81 bytes: Temperature: 17.4��C, Humidity: 56.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2629149) uart_Test: Received 81 bytes: Temperature: 17.4��C, Humidity: 56.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2631249) uart_Test: Received 81 bytes: Temperature: 17.4��C, Humidity: 56.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2633249) uart_Test: Received 81 bytes: Temperature: 17.4��C, Humidity: 56.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2635249) uart_Test: Received 81 bytes: Temperature: 17.4��C, Humidity: 56.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2637249) uart_Test: Received 81 bytes: Temperature: 17.4��C, Humidity: 56.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2639349) uart_Test: Received 81 bytes: Temperature: 17.4��C, Humidity: 56.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2641349) uart_Test: Received 81 bytes: Temperature: 17.4��C, Humidity: 56.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2643349) uart_Test: Received 81 bytes: Temperature: 17.4��C, Humidity: 56.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2645449) uart_Test: Received 81 bytes: Temperature: 17.4��C, Humidity: 56.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2647449) uart_Test: Received 81 bytes: Temperature: 17.4��C, Humidity: 56.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2649449) uart_Test: Received 81 bytes: Temperature: 17.4��C, Humidity: 56.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2651549) uart_Test: Received 81 bytes: Temperature: 17.4��C, Humidity: 56.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2653549) uart_Test: Received 81 bytes: Temperature: 17.4��C, Humidity: 56.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2655549) uart_Test: Received 81 bytes: Temperature: 17.4��C, Humidity: 56.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2657649) uart_Test: Received 81 bytes: Temperature: 17.4��C, Humidity: 56.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2659649) uart_Test: Received 81 bytes: Temperature: 17.8��C, Humidity: 56.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2661649) uart_Test: Received 81 bytes: Temperature: 17.8��C, Humidity: 56.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2663749) uart_Test: Received 81 bytes: Temperature: 17.8��C, Humidity: 56.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2665749) uart_Test: Received 81 bytes: Temperature: 17.8��C, Humidity: 56.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2667749) uart_Test: Received 81 bytes: Temperature: 17.8��C, Humidity: 56.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2669849) uart_Test: Received 81 bytes: Temperature: 17.8��C, Humidity: 56.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2671849) uart_Test: Received 81 bytes: Temperature: 17.8��C, Humidity: 56.0%
+Manufacturer ID: 0xEF, Device ID: 0x4017
+[0m
+[0;32mI (2672649) uart_Test: Received 6 bytes: [0m
+[0;32mI (2672749) uart_Test: Received 10 bytes: [0m
+[0;32mI (2672849) uart_Test: Received 10 bytes: [0m
+[0;32mI (2672949) uart_Test: Received 10 bytes: [0m
+[0;32mI (2673049) uart_Test: Received 10 bytes: [0m
+[0;32mI (2673149) uart_Test: Received 10 bytes: [0m
+[0;32mI (2673249) uart_Test: Received 10 bytes: [0m
+[0;32mI (2673349) uart_Test: Received 10 bytes: [0m
+[0;32mI (2673449) uart_Test: Received 9 bytes: [0m
+[0;32mI (2673549) uart_Test: Received 10 bytes: [0m
+[0;32mI (2673649) uart_Test: Received 10 bytes: [0m
+[0;32mI (2673749) uart_Test: Received 10 bytes: [0m
+[0;32mI (2673849) uart_Test: Received 10 bytes: [0m
+[0;32mI (2673949) uart_Test: Received 11 bytes: [0m
+[0;32mI (2674049) uart_Test: Received 10 bytes: [0m
+[0;32mI (2674149) uart_Test: Received 10 bytes: [0m
+[0;32mI (2674249) uart_Test: Received 11 bytes: [0m
+[0;32mI (2674349) uart_Test: Received 10 bytes: [0m
+[0;32mI (2674449) uart_Test: Received 7 bytes: [0m
+[0;32mI (2674549) uart_Test: Received 2 bytes: [0m

@@ -1,0 +1,49 @@
+-- IDF_TARGET not set, using default target: esp32
+-- Found Git: /usr/bin/git (found version "2.25.1") 
+-- The C compiler identification is GNU 13.2.0
+-- The CXX compiler identification is GNU 13.2.0
+-- The ASM compiler identification is GNU
+-- Found assembler: /home/lsworl/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc
+-- Check for working C compiler: /home/lsworl/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc
+-- Check for working C compiler: /home/lsworl/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc -- works
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Check for working CXX compiler: /home/lsworl/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/bin/xtensa-esp32-elf-g++
+-- Check for working CXX compiler: /home/lsworl/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/bin/xtensa-esp32-elf-g++ -- works
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- git rev-parse returned 'fatal: not a git repository (or any of the parent directories): .git'
+-- Could not use 'git describe' to determine PROJECT_VER.
+-- Building ESP-IDF components for target esp32
+-- Project sdkconfig file /home/lsworl/esp32/test/sdkconfig
+-- Compiler supported targets: xtensa-esp-elf
+-- Looking for sys/types.h
+-- Looking for sys/types.h - found
+-- Looking for stdint.h
+-- Looking for stdint.h - found
+-- Looking for stddef.h
+-- Looking for stddef.h - found
+-- Check size of time_t
+-- Check size of time_t - done
+-- Found Python3: /home/lsworl/.espressif/python_env/idf5.2_py3.8_env/bin/python (found version "3.8.10") found components: Interpreter 
+-- Performing Test C_COMPILER_SUPPORTS_WFORMAT_SIGNEDNESS
+-- Performing Test C_COMPILER_SUPPORTS_WFORMAT_SIGNEDNESS - Success
+-- App "test" version: 1
+-- Adding linker script /home/lsworl/esp32/test/build/esp-idf/esp_system/ld/memory.ld
+-- Adding linker script /home/lsworl/esp32/esp-idf/components/esp_system/ld/esp32/sections.ld.in
+-- Adding linker script /home/lsworl/esp32/esp-idf/components/esp_rom/esp32/ld/esp32.rom.ld
+-- Adding linker script /home/lsworl/esp32/esp-idf/components/esp_rom/esp32/ld/esp32.rom.api.ld
+-- Adding linker script /home/lsworl/esp32/esp-idf/components/esp_rom/esp32/ld/esp32.rom.libgcc.ld
+-- Adding linker script /home/lsworl/esp32/esp-idf/components/esp_rom/esp32/ld/esp32.rom.newlib-data.ld
+-- Adding linker script /home/lsworl/esp32/esp-idf/components/esp_rom/esp32/ld/esp32.rom.syscalls.ld
+-- Adding linker script /home/lsworl/esp32/esp-idf/components/esp_rom/esp32/ld/esp32.rom.newlib-funcs.ld
+-- Adding linker script /home/lsworl/esp32/esp-idf/components/soc/esp32/ld/esp32.peripherals.ld
+-- Components: app_trace app_update bootloader bootloader_support bt cmock console cxx driver efuse esp-tls esp_adc esp_app_format esp_bootloader_format esp_coex esp_common esp_eth esp_event esp_gdbstub esp_hid esp_http_client esp_http_server esp_https_ota esp_https_server esp_hw_support esp_lcd esp_local_ctrl esp_mm esp_netif esp_netif_stack esp_partition esp_phy esp_pm esp_psram esp_ringbuf esp_rom esp_system esp_timer esp_wifi espcoredump esptool_py fatfs freertos hal heap http_parser idf_test ieee802154 json log lwip main mbedtls mqtt newlib nvs_flash nvs_sec_provider openthread partition_table perfmon protobuf-c protocomm pthread sdmmc soc spi_flash spiffs tcp_transport ulp unity usb vfs wear_levelling wifi_provisioning wpa_supplicant xtensa
+-- Component paths: /home/lsworl/esp32/esp-idf/components/app_trace /home/lsworl/esp32/esp-idf/components/app_update /home/lsworl/esp32/esp-idf/components/bootloader /home/lsworl/esp32/esp-idf/components/bootloader_support /home/lsworl/esp32/esp-idf/components/bt /home/lsworl/esp32/esp-idf/components/cmock /home/lsworl/esp32/esp-idf/components/console /home/lsworl/esp32/esp-idf/components/cxx /home/lsworl/esp32/esp-idf/components/driver /home/lsworl/esp32/esp-idf/components/efuse /home/lsworl/esp32/esp-idf/components/esp-tls /home/lsworl/esp32/esp-idf/components/esp_adc /home/lsworl/esp32/esp-idf/components/esp_app_format /home/lsworl/esp32/esp-idf/components/esp_bootloader_format /home/lsworl/esp32/esp-idf/components/esp_coex /home/lsworl/esp32/esp-idf/components/esp_common /home/lsworl/esp32/esp-idf/components/esp_eth /home/lsworl/esp32/esp-idf/components/esp_event /home/lsworl/esp32/esp-idf/components/esp_gdbstub /home/lsworl/esp32/esp-idf/components/esp_hid /home/lsworl/esp32/esp-idf/components/esp_http_client /home/lsworl/esp32/esp-idf/components/esp_http_server /home/lsworl/esp32/esp-idf/components/esp_https_ota /home/lsworl/esp32/esp-idf/components/esp_https_server /home/lsworl/esp32/esp-idf/components/esp_hw_support /home/lsworl/esp32/esp-idf/components/esp_lcd /home/lsworl/esp32/esp-idf/components/esp_local_ctrl /home/lsworl/esp32/esp-idf/components/esp_mm /home/lsworl/esp32/esp-idf/components/esp_netif /home/lsworl/esp32/esp-idf/components/esp_netif_stack /home/lsworl/esp32/esp-idf/components/esp_partition /home/lsworl/esp32/esp-idf/components/esp_phy /home/lsworl/esp32/esp-idf/components/esp_pm /home/lsworl/esp32/esp-idf/components/esp_psram /home/lsworl/esp32/esp-idf/components/esp_ringbuf /home/lsworl/esp32/esp-idf/components/esp_rom /home/lsworl/esp32/esp-idf/components/esp_system /home/lsworl/esp32/esp-idf/components/esp_timer /home/lsworl/esp32/esp-idf/components/esp_wifi /home/lsworl/esp32/esp-idf/components/espcoredump /home/lsworl/esp32/esp-idf/components/esptool_py /home/lsworl/esp32/esp-idf/components/fatfs /home/lsworl/esp32/esp-idf/components/freertos /home/lsworl/esp32/esp-idf/components/hal /home/lsworl/esp32/esp-idf/components/heap /home/lsworl/esp32/esp-idf/components/http_parser /home/lsworl/esp32/esp-idf/components/idf_test /home/lsworl/esp32/esp-idf/components/ieee802154 /home/lsworl/esp32/esp-idf/components/json /home/lsworl/esp32/esp-idf/components/log /home/lsworl/esp32/esp-idf/components/lwip /home/lsworl/esp32/test/main /home/lsworl/esp32/esp-idf/components/mbedtls /home/lsworl/esp32/esp-idf/components/mqtt /home/lsworl/esp32/esp-idf/components/newlib /home/lsworl/esp32/esp-idf/components/nvs_flash /home/lsworl/esp32/esp-idf/components/nvs_sec_provider /home/lsworl/esp32/esp-idf/components/openthread /home/lsworl/esp32/esp-idf/components/partition_table /home/lsworl/esp32/esp-idf/components/perfmon /home/lsworl/esp32/esp-idf/components/protobuf-c /home/lsworl/esp32/esp-idf/components/protocomm /home/lsworl/esp32/esp-idf/components/pthread /home/lsworl/esp32/esp-idf/components/sdmmc /home/lsworl/esp32/esp-idf/components/soc /home/lsworl/esp32/esp-idf/components/spi_flash /home/lsworl/esp32/esp-idf/components/spiffs /home/lsworl/esp32/esp-idf/components/tcp_transport /home/lsworl/esp32/esp-idf/components/ulp /home/lsworl/esp32/esp-idf/components/unity /home/lsworl/esp32/esp-idf/components/usb /home/lsworl/esp32/esp-idf/components/vfs /home/lsworl/esp32/esp-idf/components/wear_levelling /home/lsworl/esp32/esp-idf/components/wifi_provisioning /home/lsworl/esp32/esp-idf/components/wpa_supplicant /home/lsworl/esp32/esp-idf/components/xtensa
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/lsworl/esp32/test/build

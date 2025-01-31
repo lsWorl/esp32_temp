@@ -1,0 +1,423 @@
+ets Jun  8 2016 00:22:57
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7172
+load:0x40078000,len:15532
+load:0x40080400,len:4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (29) boot: ESP-IDF v5.2 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Jan 23 2025 03:09:07[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (33) boot: chip revision: v1.1[0m
+[0;32mI (37) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (41) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (46) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (50) boot: Enabling RNG early entropy source...[0m
+[0;32mI (56) boot: Partition Table:[0m
+[0;32mI (59) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (67) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (74) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (82) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (89) boot: End of partition table[0m
+[0;32mI (93) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=23604h (144900) map[0m
+[0;32mI (151) esp_image: segment 1: paddr=0003362c vaddr=3ffb0000 size=03bech ( 15340) load[0m
+[0;32mI (157) esp_image: segment 2: paddr=00037220 vaddr=40080000 size=08df8h ( 36344) load[0m
+[0;32mI (172) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=852e0h (545504) map[0m
+[0;32mI (359) esp_image: segment 4: paddr=000c5308 vaddr=40088df8 size=0e7c0h ( 59328) load[0m
+[0;32mI (394) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (394) boot: Disabling RNG early entropy source...[0m
+[0;32mI (406) cpu_start: Multicore app[0m
+[0;32mI (415) cpu_start: Pro cpu start user code[0m
+[0;32mI (415) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (415) cpu_start: Application information:[0m
+[0;32mI (418) cpu_start: Project name:     test[0m
+[0;32mI (422) cpu_start: App version:      1[0m
+[0;32mI (427) cpu_start: Compile time:     Jan 23 2025 03:09:00[0m
+[0;32mI (433) cpu_start: ELF file SHA256:  265f85420...[0m
+[0;32mI (438) cpu_start: ESP-IDF:          v5.2[0m
+[0;32mI (443) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (448) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (452) cpu_start: Chip rev:         v1.1[0m
+[0;32mI (457) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (465) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (470) heap_init: At 3FFB7D00 len 00028300 (160 KiB): DRAM[0m
+[0;32mI (477) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (483) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (489) heap_init: At 400975B8 len 00008A48 (34 KiB): IRAM[0m
+[0;32mI (497) spi_flash: detected chip: generic[0m
+[0;32mI (500) spi_flash: flash io: dio[0m
+[0;33mW (504) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (518) main_task: Started on CPU0[0m
+[0;32mI (528) main_task: Calling app_main()[0m
+[0;32mI (568) wifi:wifi driver task: 3ffbfc78, prio:23, stack:6656, core=0[0m
+[0;32mI (578) wifi:wifi firmware version: cc1dd81[0m
+[0;32mI (578) wifi:wifi certification version: v7.0[0m
+[0;32mI (588) wifi:config NVS flash: enabled[0m
+[0;32mI (588) wifi:config nano formating: disabled[0m
+[0;32mI (588) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (588) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (598) wifi:Init management short buffer num: 32[0m
+[0;32mI (598) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (608) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (608) wifi:Init static rx buffer num: 10[0m
+[0;32mI (608) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (618) wifi_init: rx ba win: 6[0m
+[0;32mI (618) wifi_init: tcpip mbox: 32[0m
+[0;32mI (628) wifi_init: udp mbox: 6[0m
+[0;32mI (628) wifi_init: tcp mbox: 6[0m
+[0;32mI (628) wifi_init: tcp tx win: 5760[0m
+[0;32mI (638) wifi_init: tcp rx win: 5760[0m
+[0;32mI (638) wifi_init: tcp mss: 1440[0m
+[0;32mI (648) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (648) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (658) phy_init: phy_version 4791,2c4672b,Dec 20 2023,16:06:06[0m
+[0;32mI (738) wifi:mode : sta (f8:b3:b7:7f:23:38)[0m
+[0;32mI (738) wifi:enable tsf[0m
+[0;32mI (738) TCP_SERVER: Connecting to Wifi...[0m
+[1;31mE (738) wifi:sta is connecting, return error[0m
+[0;32mI (758) wifi:new:<1,0>, old:<1,0>, ap:<255,255>, sta:<1,0>, prof:1[0m
+[0;32mI (758) wifi:state: init -> auth (b0)[0m
+[0;32mI (768) wifi:state: auth -> init (1c0)[0m
+[0;32mI (768) wifi:new:<1,0>, old:<1,0>, ap:<255,255>, sta:<1,0>, prof:1[0m
+[0;32mI (1738) TCP_SERVER: Connected to WiFi[0m
+[0;32mI (1738) TCP_SERVER: IP Address: 0.0.0.0[0m
+[0;32mI (1738) TCP_SERVER: TCP server started, listening on port 80[0m
+[0;32mI (4738) uart_Test: failed to receive something[0m
+[0;32mI (7838) uart_Test: failed to receive something[0m
+[0;32mI (10938) uart_Test: failed to receive something[0m
+[0;32mI (14038) uart_Test: failed to receive something[0m
+[0;32mI (17138) uart_Test: failed to receive something[0m
+[0;32mI (20238) uart_Test: failed to receive something[0m
+[0;32mI (23338) uart_Test: failed to receive something[0m
+[0;32mI (26438) uart_Test: failed to receive something[0m
+[0;32mI (29538) uart_Test: failed to receive something[0m
+[0;32mI (32638) uart_Test: failed to receive something[0m
+[0;32mI (35738) uart_Test: failed to receive something[0m
+[0;32mI (38838) uart_Test: failed to receive something[0m
+[0;32mI (41938) uart_Test: failed to receive something[0m
+[0;32mI (45038) uart_Test: failed to receive something[0m
+[0;32mI (48138) uart_Test: failed to receive something[0m
+[0;32mI (51238) uart_Test: failed to receive something[0m
+[0;32mI (54338) uart_Test: failed to receive something[0m
+[0;32mI (57438) uart_Test: failed to receive something[0m
+[0;32mI (60538) uart_Test: failed to receive something[0m
+[0;32mI (63638) uart_Test: failed to receive something[0m
+[0;32mI (66738) uart_Test: failed to receive something[0m
+[0;32mI (69838) uart_Test: failed to receive something[0m
+[0;32mI (72938) uart_Test: failed to receive something[0m
+[0;32mI (76038) uart_Test: failed to receive something[0m
+[0;32mI (79138) uart_Test: failed to receive something[0m
+[0;32mI (82238) uart_Test: failed to receive something[0m
+[0;32mI (85338) uart_Test: failed to receive something[0m
+[0;32mI (88438) uart_Test: failed to receive something[0m
+[0;32mI (91538) uart_Test: failed to receive something[0m
+[0;32mI (94638) uart_Test: failed to receive something[0m
+[0;32mI (97738) uart_Test: failed to receive something[0m
+[0;32mI (100838) uart_Test: failed to receive something[0m
+[0;32mI (103938) uart_Test: failed to receive something[0m
+[0;32mI (107038) uart_Test: failed to receive something[0m
+[0;32mI (110138) uart_Test: failed to receive something[0m
+[0;32mI (113238) uart_Test: failed to receive something[0m
+[0;32mI (116338) uart_Test: failed to receive something[0m
+[0;32mI (119438) uart_Test: failed to receive something[0m
+[0;32mI (122538) uart_Test: failed to receive something[0m
+[0;32mI (125638) uart_Test: failed to receive something[0m
+[0;32mI (136358) uart_Test: Received 277 bytes: [0m
+[0;32mI (142858) uart_Test: Received 279 bytes: [0m
+[0;32mI (145958) uart_Test: failed to receive something[0m
+[0;32mI (149058) uart_Test: failed to receive something[0m
+ets Jun  8 2016 00:22:57
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7172
+load:0x40078000,len:15532
+load:0x40080400,len:4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (29) boot: ESP-IDF v5.2 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Jan 23 2025 03:09:07[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (33) boot: chip revision: v1.1[0m
+[0;32mI (37) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (42) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (46) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (51) boot: Enabling RNG early entropy source...[0m
+[0;32mI (56) boot: Partition Table:[0m
+[0;32mI (60) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (67) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (74) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (82) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (89) boot: End of partition table[0m
+[0;32mI (93) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=23604h (144900) map[0m
+[0;32mI (152) esp_image: segment 1: paddr=0003362c vaddr=3ffb0000 size=03bech ( 15340) load[0m
+[0;32mI (158) esp_image: segment 2: paddr=00037220 vaddr=40080000 size=08df8h ( 36344) load[0m
+[0;32mI (172) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=852e0h (545504) map[0m
+[0;32mI (359) esp_image: segment 4: paddr=000c5308 vaddr=40088df8 size=0e7c0h ( 59328) load[0m
+[0;32mI (394) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (394) boot: Disabling RNG early entropy source...[0m
+[0;32mI (406) cpu_start: Multicore app[0m
+[0;32mI (415) cpu_start: Pro cpu start user code[0m
+[0;32mI (415) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (415) cpu_start: Application information:[0m
+[0;32mI (418) cpu_start: Project name:     test[0m
+[0;32mI (422) cpu_start: App version:      1[0m
+[0;32mI (427) cpu_start: Compile time:     Jan 23 2025 03:09:00[0m
+[0;32mI (433) cpu_start: ELF file SHA256:  265f85420...[0m
+[0;32mI (438) cpu_start: ESP-IDF:          v5.2[0m
+[0;32mI (443) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (448) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (453) cpu_start: Chip rev:         v1.1[0m
+[0;32mI (458) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (465) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (471) heap_init: At 3FFB7D00 len 00028300 (160 KiB): DRAM[0m
+[0;32mI (477) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (483) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (490) heap_init: At 400975B8 len 00008A48 (34 KiB): IRAM[0m
+[0;32mI (497) spi_flash: detected chip: generic[0m
+[0;32mI (500) spi_flash: flash io: dio[0m
+[0;33mW (504) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (518) main_task: Started on CPU0[0m
+[0;32mI (528) main_task: Calling app_main()[0m
+[0;32mI (568) wifi:wifi driver task: 3ffbfc78, prio:23, stack:6656, core=0[0m
+[0;32mI (578) wifi:wifi firmware version: cc1dd81[0m
+[0;32mI (578) wifi:wifi certification version: v7.0[0m
+[0;32mI (588) wifi:config NVS flash: enabled[0m
+[0;32mI (588) wifi:config nano formating: disabled[0m
+[0;32mI (588) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (588) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (598) wifi:Init management short buffer num: 32[0m
+[0;32mI (598) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (608) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (608) wifi:Init static rx buffer num: 10[0m
+[0;32mI (608) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (618) wifi_init: rx ba win: 6[0m
+[0;32mI (618) wifi_init: tcpip mbox: 32[0m
+[0;32mI (628) wifi_init: udp mbox: 6[0m
+[0;32mI (628) wifi_init: tcp mbox: 6[0m
+[0;32mI (628) wifi_init: tcp tx win: 5760[0m
+[0;32mI (638) wifi_init: tcp rx win: 5760[0m
+[0;32mI (638) wifi_init: tcp mss: 1440[0m
+[0;32mI (648) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (648) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (658) phy_init: phy_version 4791,2c4672b,Dec 20 2023,16:06:06[0m
+[0;32mI (738) wifi:mode : sta (f8:b3:b7:7f:23:38)[0m
+[0;32mI (738) wifi:enable tsf[0m
+[0;32mI (738) TCP_SERVER: Connecting to Wifi...[0m
+[1;31mE (748) wifi:sta is connecting, return error[0m
+[0;32mI (758) wifi:new:<1,0>, old:<1,0>, ap:<255,255>, sta:<1,0>, prof:1[0m
+[0;32mI (758) wifi:state: init -> auth (b0)[0m
+[0;32mI (768) wifi:state: auth -> assoc (0)[0m
+[0;32mI (818) wifi:state: assoc -> run (10)[0m
+[0;32mI (848) wifi:connected with white, aid = 5, channel 1, BW20, bssid = 72:71:15:07:c7:f4[0m
+[0;32mI (848) wifi:security: WPA2-PSK, phy: bgn, rssi: -51[0m
+[0;32mI (848) wifi:pm start, type: 1[0m
+
+[0;32mI (848) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (868) wifi:<ba-add>idx:0 (ifx:0, 72:71:15:07:c7:f4), tid:0, ssn:0, winSize:64[0m
+[0;32mI (928) wifi:dp: 2, bi: 102400, li: 4, scale listen interval from 307200 us to 409600 us[0m
+[0;32mI (928) wifi:AP's beacon interval = 102400 us, DTIM period = 2[0m
+[0;32mI (1588) wifi:<ba-add>idx:1 (ifx:0, 72:71:15:07:c7:f4), tid:6, ssn:2, winSize:64[0m
+[0;32mI (1748) TCP_SERVER: Connected to WiFi[0m
+[0;32mI (1748) TCP_SERVER: IP Address: 0.0.0.0[0m
+[0;32mI (1748) TCP_SERVER: TCP server started, listening on port 80[0m
+[0;32mI (1858) esp_netif_handlers: sta ip: 192.168.160.60, mask: 255.255.255.0, gw: 192.168.160.17[0m
+[0;32mI (4748) uart_Test: failed to receive something[0m
+[0;32mI (7848) uart_Test: failed to receive something[0m
+[0;32mI (13378) uart_Test: Received 5 bytes: [0m
+[0;32mI (16478) uart_Test: failed to receive something[0m
+[0;32mI (22278) uart_Test: Received 12 bytes: [0m
+[0;32mI (25378) uart_Test: failed to receive something[0m
+[0;32mI (28478) uart_Test: failed to receive something[0m
+[0;32mI (31578) uart_Test: failed to receive something[0m
+[0;32mI (34678) uart_Test: failed to receive something[0m
+[0;32mI (37778) uart_Test: failed to receive something[0m
+[0;32mI (40878) uart_Test: failed to receive something[0m
+[0;32mI (43978) uart_Test: failed to receive something[0m
+[0;32mI (47078) uart_Test: failed to receive something[0m
+[0;32mI (50178) uart_Test: failed to receive something[0m
+[0;32mI (53278) uart_Test: failed to receive something[0m
+[0;32mI (56378) uart_Test: failed to receive something[0m
+[0;32mI (59478) uart_Test: failed to receive something[0m
+[0;32mI (62578) uart_Test: failed to receive something[0m
+[0;32mI (65678) uart_Test: failed to receive something[0m
+[0;32mI (68778) uart_Test: failed to receive something[0m
+[0;32mI (71878) uart_Test: failed to receive something[0m
+[0;32mI (74978) uart_Test: failed to receive something[0m
+[0;32mI (78078) uart_Test: failed to receive something[0m
+[0;32mI (81178) uart_Test: failed to receive something[0m
+[0;32mI (84278) uart_Test: failed to receive something[0m
+[0;32mI (87378) uart_Test: failed to receive something[0m
+[0;32mI (90478) uart_Test: failed to receive something[0m
+[0;32mI (93578) uart_Test: failed to receive something[0m
+[0;32mI (96678) uart_Test: failed to receive something[0m
+[0;32mI (99778) uart_Test: failed to receive something[0m
+[0;32mI (102878) uart_Test: failed to receive something[0m
+[0;32mI (105978) uart_Test: failed to receive something[0m
+[0;32mI (109078) uart_Test: failed to receive something[0m
+[0;32mI (112178) uart_Test: failed to receive something[0m
+[0;32mI (115278) uart_Test: failed to receive something[0m
+[0;32mI (118378) uart_Test: failed to receive something[0m
+[0;32mI (121478) uart_Test: failed to receive something[0m
+[0;32mI (124578) uart_Test: failed to receive something[0m
+[0;32mI (127678) uart_Test: failed to receive something[0m
+[0;32mI (130778) uart_Test: failed to receive something[0m
+[0;32mI (133878) uart_Test: failed to receive something[0m
+[0;32mI (136978) uart_Test: failed to receive something[0m
+[0;32mI (140078) uart_Test: failed to receive something[0m
+[0;32mI (143178) uart_Test: failed to receive something[0m
+[0;32mI (146278) uart_Test: failed to receive something[0m
+[0;32mI (149378) uart_Test: failed to receive something[0m
+[0;32mI (152478) uart_Test: failed to receive something[0m
+[0;32mI (155578) uart_Test: failed to receive something[0m
+[0;32mI (158678) uart_Test: failed to receive something[0m
+[0;32mI (161778) uart_Test: failed to receive something[0m
+[0;32mI (164878) uart_Test: failed to receive something[0m
+[0;32mI (167978) uart_Test: failed to receive something[0m
+[0;32mI (171078) uart_Test: failed to receive something[0m
+[0;32mI (174178) uart_Test: failed to receive something[0m
+[0;32mI (177278) uart_Test: failed to receive something[0m
+[0;32mI (180378) uart_Test: failed to receive something[0m
+[0;32mI (183478) uart_Test: failed to receive something[0m
+[0;32mI (186578) uart_Test: failed to receive something[0m
+[0;32mI (189678) uart_Test: failed to receive something[0m
+[0;32mI (192778) uart_Test: failed to receive something[0m
+[0;32mI (195878) uart_Test: failed to receive something[0m
+[0;32mI (198978) uart_Test: failed to receive something[0m
+[0;32mI (202078) uart_Test: failed to receive something[0m
+[0;32mI (205178) uart_Test: failed to receive something[0m
+[0;32mI (208278) uart_Test: failed to receive something[0m
+[0;32mI (211378) uart_Test: failed to receive something[0m
+[0;32mI (214478) uart_Test: failed to receive something[0m
+[0;32mI (217578) uart_Test: failed to receive something[0m
+[0;32mI (220678) uart_Test: failed to receive something[0m
+[0;32mI (223778) uart_Test: failed to receive something[0m
+[0;32mI (226878) uart_Test: failed to receive something[0m
+[0;32mI (229978) uart_Test: failed to receive something[0m
+[0;32mI (233078) uart_Test: failed to receive something[0m
+[0;32mI (236178) uart_Test: failed to receive something[0m
+[0;32mI (239278) uart_Test: failed to receive something[0m
+[0;32mI (242378) uart_Test: failed to receive something[0m
+[0;32mI (245478) uart_Test: failed to receive something[0m
+[0;32mI (248578) uart_Test: failed to receive something[0m
+[0;32mI (251678) uart_Test: failed to receive something[0m
+[0;32mI (254778) uart_Test: failed to receive something[0m
+[0;32mI (257878) uart_Test: failed to receive something[0m
+[0;32mI (260978) uart_Test: failed to receive something[0m
+[0;32mI (264078) uart_Test: failed to receive something[0m
+[0;32mI (267178) uart_Test: failed to receive something[0m
+[0;32mI (270278) uart_Test: failed to receive something[0m
+[0;32mI (273378) uart_Test: failed to receive something[0m
+[0;32mI (276478) uart_Test: failed to receive something[0m
+[0;32mI (279578) uart_Test: failed to receive something[0m
+[0;32mI (282678) uart_Test: failed to receive something[0m
+[0;32mI (285778) uart_Test: failed to receive something[0m
+[0;32mI (288878) uart_Test: failed to receive something[0m
+[0;32mI (291978) uart_Test: failed to receive something[0m
+[0;32mI (295078) uart_Test: failed to receive something[0m
+[0;32mI (298178) uart_Test: failed to receive something[0m
+[0;32mI (301278) uart_Test: failed to receive something[0m
+[0;32mI (304378) uart_Test: failed to receive something[0m
+[0;32mI (307478) uart_Test: failed to receive something[0m
+[0;32mI (310578) uart_Test: failed to receive something[0m
+[0;32mI (313678) uart_Test: failed to receive something[0m
+[0;32mI (316778) uart_Test: failed to receive something[0m
+[0;32mI (319878) uart_Test: failed to receive something[0m
+[0;32mI (322978) uart_Test: failed to receive something[0m
+[0;32mI (326078) uart_Test: failed to receive something[0m
+[0;32mI (329178) uart_Test: failed to receive something[0m
+[0;32mI (332278) uart_Test: failed to receive something[0m
+[0;32mI (335378) uart_Test: failed to receive something[0m
+[0;32mI (338478) uart_Test: failed to receive something[0m
+[0;32mI (341578) uart_Test: failed to receive something[0m
+[0;32mI (344678) uart_Test: failed to receive something[0m
+[0;32mI (347778) uart_Test: failed to receive something[0m
+[0;32mI (350878) uart_Test: failed to receive something[0m
+[0;32mI (353978) uart_Test: failed to receive something[0m
+[0;32mI (357078) uart_Test: failed to receive something[0m
+[0;32mI (360178) uart_Test: failed to receive something[0m
+[0;32mI (363278) uart_Test: failed to receive something[0m
+[0;32mI (366378) uart_Test: failed to receive something[0m
+[0;32mI (369478) uart_Test: failed to receive something[0m
+[0;32mI (372578) uart_Test: failed to receive something[0m
+[0;32mI (375678) uart_Test: failed to receive something[0m
+[0;32mI (378778) uart_Test: failed to receive something[0m
+[0;32mI (381878) uart_Test: failed to receive something[0m
+[0;32mI (384978) uart_Test: failed to receive something[0m
+[0;32mI (388078) uart_Test: failed to receive something[0m
+[0;32mI (391178) uart_Test: failed to receive something[0m
+[0;32mI (394278) uart_Test: failed to receive something[0m
+[0;32mI (397378) uart_Test: failed to receive something[0m
+[0;32mI (400478) uart_Test: failed to receive something[0m
+[0;32mI (403578) uart_Test: failed to receive something[0m
+[0;32mI (406678) uart_Test: failed to receive something[0m
+[0;32mI (409778) uart_Test: failed to receive something[0m
+[0;32mI (412878) uart_Test: failed to receive something[0m
+[0;32mI (415978) uart_Test: failed to receive something[0m
+[0;32mI (419078) uart_Test: failed to receive something[0m
+[0;32mI (422178) uart_Test: failed to receive something[0m
+[0;32mI (425278) uart_Test: failed to receive something[0m
+[0;32mI (428378) uart_Test: failed to receive something[0m
+[0;32mI (431478) uart_Test: failed to receive something[0m
+[0;32mI (434578) uart_Test: failed to receive something[0m
+[0;32mI (437678) uart_Test: failed to receive something[0m
+[0;32mI (440778) uart_Test: failed to receive something[0m
+[0;32mI (443878) uart_Test: failed to receive something[0m
+[0;32mI (446978) uart_Test: failed to receive something[0m
+[0;32mI (450078) uart_Test: failed to receive something[0m
+[0;32mI (453178) uart_Test: failed to receive something[0m
+[0;32mI (456278) uart_Test: failed to receive something[0m
+[0;32mI (459378) uart_Test: failed to receive something[0m
+[0;32mI (462478) uart_Test: failed to receive something[0m
+[0;32mI (465578) uart_Test: failed to receive something[0m
+[0;32mI (468678) uart_Test: failed to receive something[0m
+[0;32mI (471778) uart_Test: failed to receive something[0m
+[0;32mI (474878) uart_Test: failed to receive something[0m
+[0;32mI (477978) uart_Test: failed to receive something[0m
+[0;32mI (481078) uart_Test: failed to receive something[0m
+[0;32mI (484178) uart_Test: failed to receive something[0m
+[0;32mI (487278) uart_Test: failed to receive something[0m
+[0;32mI (490378) uart_Test: failed to receive something[0m
+[0;32mI (493478) uart_Test: failed to receive something[0m
+[0;32mI (496578) uart_Test: failed to receive something[0m
+[0;32mI (499678) uart_Test: failed to receive something[0m
+[0;32mI (502778) uart_Test: failed to receive something[0m
+[0;32mI (505878) uart_Test: failed to receive something[0m
+[0;32mI (508978) uart_Test: failed to receive something[0m
+[0;32mI (512078) uart_Test: failed to receive something[0m
+[0;32mI (515178) uart_Test: failed to receive something[0m
+[0;32mI (518278) uart_Test: failed to receive something[0m
+[0;32mI (521378) uart_Test: failed to receive something[0m
+[0;32mI (524478) uart_Test: failed to receive something[0m
+[0;32mI (527578) uart_Test: failed to receive something[0m
+[0;32mI (530678) uart_Test: failed to receive something[0m
+[0;32mI (533778) uart_Test: failed to receive something[0m
+[0;32mI (536878) uart_Test: failed to receive something[0m
+[0;32mI (539978) uart_Test: failed to receive something[0m
+[0;32mI (543078) uart_Test: failed to receive something[0m
+[0;32mI (546178) uart_Test: failed to receive something[0m
+[0;32mI (549278) uart_Test: failed to receive something[0m
+[0;32mI (552378) uart_Test: failed to receive something[0m
+[0;32mI (555478) uart_Test: failed to receive something[0m
+[0;32mI (558578) uart_Test: failed to receive something[0m
+[0;32mI (561678) uart_Test: failed to receive something[0m
+[0;32mI (564778) uart_Test: failed to receive something[0m
+[0;32mI (567878) uart_Test: failed to receive something[0m
+[0;32mI (570978) uart_Test: failed to receive something[0m
+[0;32mI (574078) uart_Test: failed to receive something[0m
+[0;32mI (577178) uart_Test: failed to receive something[0m
+[0;32mI (580278) uart_Test: failed to receive something[0m
+[0;32mI (583378) uart_Test: failed to receive something[0m
+[0;32mI (586478) uart_Test: failed to receive something[0m
+[0;32mI (589578) uart_Test: failed to receive something[0m
+[0;32mI (592678) uart_Test: failed to receive something[0m
+[0;32mI (595778) uart_Test: failed to receive something[0m
+[0;32mI (598878) uart_Test: failed to receive something[0m
+[0;32mI (601978) uart_Test: failed to receive something[0m
+[0;32mI (605078) uart_Test: failed to receive something[0m

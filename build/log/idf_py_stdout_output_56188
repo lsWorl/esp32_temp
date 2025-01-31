@@ -1,0 +1,203 @@
+ets Jun  8 2016 00:22:57
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7172
+load:0x40078000,len:15532
+load:0x40080400,len:4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (29) boot: ESP-IDF v5.2 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Jan 23 2025 03:09:07[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (33) boot: chip revision: v1.1[0m
+[0;32mI (37) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (41) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (46) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (50) boot: Enabling RNG early entropy source...[0m
+[0;32mI (56) boot: Partition Table:[0m
+[0;32mI (59) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (67) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (74) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (82) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (89) boot: End of partition table[0m
+[0;32mI (93) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=235d4h (144852) map[0m
+[0;32mI (151) esp_image: segment 1: paddr=000335fc vaddr=3ffb0000 size=03bech ( 15340) load[0m
+[0;32mI (157) esp_image: segment 2: paddr=000371f0 vaddr=40080000 size=08e28h ( 36392) load[0m
+[0;32mI (172) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=852c0h (545472) map[0m
+[0;32mI (359) esp_image: segment 4: paddr=000c52e8 vaddr=40088e28 size=0e790h ( 59280) load[0m
+[0;32mI (394) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (394) boot: Disabling RNG early entropy source...[0m
+[0;32mI (406) cpu_start: Multicore app[0m
+[0;32mI (414) cpu_start: Pro cpu start user code[0m
+[0;32mI (415) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (415) cpu_start: Application information:[0m
+[0;32mI (418) cpu_start: Project name:     test[0m
+[0;32mI (422) cpu_start: App version:      1[0m
+[0;32mI (427) cpu_start: Compile time:     Jan 23 2025 03:09:00[0m
+[0;32mI (433) cpu_start: ELF file SHA256:  5d7a4132e...[0m
+[0;32mI (438) cpu_start: ESP-IDF:          v5.2[0m
+[0;32mI (443) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (447) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (452) cpu_start: Chip rev:         v1.1[0m
+[0;32mI (457) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (464) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (470) heap_init: At 3FFB7D00 len 00028300 (160 KiB): DRAM[0m
+[0;32mI (477) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (483) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (489) heap_init: At 400975B8 len 00008A48 (34 KiB): IRAM[0m
+[0;32mI (497) spi_flash: detected chip: generic[0m
+[0;32mI (500) spi_flash: flash io: dio[0m
+[0;33mW (504) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (518) main_task: Started on CPU0[0m
+[0;32mI (528) main_task: Calling app_main()[0m
+[0;32mI (568) wifi:wifi driver task: 3ffbfc78, prio:23, stack:6656, core=0[0m
+[0;32mI (578) wifi:wifi firmware version: cc1dd81[0m
+[0;32mI (578) wifi:wifi certification version: v7.0[0m
+[0;32mI (588) wifi:config NVS flash: enabled[0m
+[0;32mI (588) wifi:config nano formating: disabled[0m
+[0;32mI (588) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (588) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (598) wifi:Init management short buffer num: 32[0m
+[0;32mI (598) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (608) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (608) wifi:Init static rx buffer num: 10[0m
+[0;32mI (608) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (618) wifi_init: rx ba win: 6[0m
+[0;32mI (618) wifi_init: tcpip mbox: 32[0m
+[0;32mI (628) wifi_init: udp mbox: 6[0m
+[0;32mI (628) wifi_init: tcp mbox: 6[0m
+[0;32mI (628) wifi_init: tcp tx win: 5760[0m
+[0;32mI (638) wifi_init: tcp rx win: 5760[0m
+[0;32mI (638) wifi_init: tcp mss: 1440[0m
+[0;32mI (648) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (648) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (658) phy_init: phy_version 4791,2c4672b,Dec 20 2023,16:06:06[0m
+[0;32mI (738) wifi:mode : sta (f8:b3:b7:7f:23:38)[0m
+[0;32mI (738) wifi:enable tsf[0m
+[0;32mI (738) TCP_SERVER: Connecting to Wifi...[0m
+[1;31mE (748) wifi:sta is connecting, return error[0m
+[0;32mI (758) wifi:new:<1,0>, old:<1,0>, ap:<255,255>, sta:<1,0>, prof:1[0m
+[0;32mI (758) wifi:state: init -> auth (b0)[0m
+[0;32mI (768) wifi:state: auth -> init (1c0)[0m
+[0;32mI (768) wifi:new:<1,0>, old:<1,0>, ap:<255,255>, sta:<1,0>, prof:1[0m
+[0;32mI (1748) TCP_SERVER: Connected to WiFi[0m
+[0;32mI (1748) TCP_SERVER: IP Address: 0.0.0.0[0m
+[0;32mI (1748) TCP_SERVER: TCP server started, listening on port 80[0m
+[0;32mI (2648) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (2848) uart_Test: Received 65 bytes: Manufacturer ID: 0xBD, Device ID: 0xEF7B
+W25Q64 id: 0xbd0xef7b
+[0m
+[0;32mI (3948) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (4048) uart_Test: Received 65 bytes: Manufacturer ID: 0xDE, Device ID: 0xF7BD
+W25Q64 id: 0xde0xf7bd
+[0m
+[0;32mI (5148) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (5248) uart_Test: Received 65 bytes: Manufacturer ID: 0xEF, Device ID: 0x7BDE
+W25Q64 id: 0xef0x7bde
+[0m
+[0;32mI (6348) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (6548) uart_Test: Received 65 bytes: Manufacturer ID: 0xF7, Device ID: 0xBDEF
+W25Q64 id: 0xf70xbdef
+[0m
+[0;32mI (7648) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (7748) uart_Test: Received 65 bytes: Manufacturer ID: 0x39, Device ID: 0xCE73
+W25Q64 id: 0x390xce73
+[0m
+[0;32mI (8848) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (9048) uart_Test: Received 65 bytes: Manufacturer ID: 0x9C, Device ID: 0xE739
+W25Q64 id: 0x9c0xe739
+[0m
+[0;32mI (10148) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (10248) uart_Test: Received 65 bytes: Manufacturer ID: 0xCE, Device ID: 0x739C
+W25Q64 id: 0xce0x739c
+[0m
+[0;32mI (11348) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (11448) uart_Test: Received 65 bytes: Manufacturer ID: 0xF7, Device ID: 0xBDEF
+W25Q64 id: 0xf70xbdef
+[0m
+[0;32mI (12548) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (12748) uart_Test: Received 65 bytes: Manufacturer ID: 0x7B, Device ID: 0xDEF7
+W25Q64 id: 0x7b0xdef7
+[0m
+[0;32mI (13848) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (13948) uart_Test: Received 65 bytes: Manufacturer ID: 0x9C, Device ID: 0xE739
+W25Q64 id: 0x9c0xe739
+[0m
+[0;32mI (15048) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (15148) uart_Test: Received 65 bytes: Manufacturer ID: 0xCE, Device ID: 0x739C
+W25Q64 id: 0xce0x739c
+[0m
+[0;32mI (16248) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (16448) uart_Test: Received 65 bytes: Manufacturer ID: 0xE7, Device ID: 0xBDEF
+W25Q64 id: 0xe70xbdef
+[0m
+[0;32mI (17548) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (17648) uart_Test: Received 65 bytes: Manufacturer ID: 0x7B, Device ID: 0xDEF7
+W25Q64 id: 0x7b0xdef7
+[0m
+[0;32mI (18748) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (18848) uart_Test: Received 65 bytes: Manufacturer ID: 0xBD, Device ID: 0xEF7B
+W25Q64 id: 0xbd0xef7b
+[0m
+[0;32mI (19948) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (20148) uart_Test: Received 65 bytes: Manufacturer ID: 0xCE, Device ID: 0x739C
+W25Q64 id: 0xce0x739c
+[0m
+[0;32mI (21248) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (21348) uart_Test: Received 65 bytes: Manufacturer ID: 0xE7, Device ID: 0x39CE
+W25Q64 id: 0xe70x39ce
+[0m
+[0;32mI (22448) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (22548) uart_Test: Received 65 bytes: Manufacturer ID: 0x7B, Device ID: 0xDEF7
+W25Q64 id: 0x7b0xdef7
+[0m
+[0;32mI (23648) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (23848) uart_Test: Received 65 bytes: Manufacturer ID: 0xBD, Device ID: 0xEF7B
+W25Q64 id: 0xbd0xef7b
+[0m
+[0;32mI (24948) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (25048) uart_Test: Received 65 bytes: Manufacturer ID: 0xDE, Device ID: 0xF7BD
+W25Q64 id: 0xde0xf7bd
+[0m
+[0;32mI (26148) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (26348) uart_Test: Received 65 bytes: Manufacturer ID: 0xE7, Device ID: 0x39CE
+W25Q64 id: 0xe70x39ce
+[0m
+[0;32mI (27448) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (27548) uart_Test: Received 65 bytes: Manufacturer ID: 0x73, Device ID: 0x9CF7
+W25Q64 id: 0x730x9cf7
+[0m
+[0;32mI (28648) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (28748) uart_Test: Received 65 bytes: Manufacturer ID: 0xBD, Device ID: 0xEF7B
+W25Q64 id: 0xbd0xef7b
+[0m
+[0;32mI (29848) uart_Test: Received 14 bytes: System Start
+[0m
+[0;32mI (30048) uart_Test: Received 65 bytes: Manufacturer ID: 0xDE, Device ID: 0xF7BD
+W25Q64 id: 0xde0xf7bd
+[0m

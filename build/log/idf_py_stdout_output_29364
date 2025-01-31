@@ -1,0 +1,152 @@
+ets Jun  8 2016 00:22:57
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7172
+load:0x40078000,len:15532
+load:0x40080400,len:4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (29) boot: ESP-IDF v5.2 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Jan 23 2025 03:09:07[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (33) boot: chip revision: v1.1[0m
+[0;32mI (37) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (41) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (46) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (50) boot: Enabling RNG early entropy source...[0m
+[0;32mI (56) boot: Partition Table:[0m
+[0;32mI (59) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (67) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (74) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (82) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (89) boot: End of partition table[0m
+[0;32mI (93) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=09544h ( 38212) map[0m
+[0;32mI (115) esp_image: segment 1: paddr=0001956c vaddr=3ffb0000 size=0220ch (  8716) load[0m
+[0;32mI (118) esp_image: segment 2: paddr=0001b780 vaddr=40080000 size=04898h ( 18584) load[0m
+[0;32mI (128) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=13520h ( 79136) map[0m
+[0;32mI (156) esp_image: segment 4: paddr=00033548 vaddr=40084898 size=07e84h ( 32388) load[0m
+[0;32mI (176) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (176) boot: Disabling RNG early entropy source...[0m
+[0;32mI (187) cpu_start: Multicore app[0m
+[0;32mI (196) cpu_start: Pro cpu start user code[0m
+[0;32mI (196) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (196) cpu_start: Application information:[0m
+[0;32mI (199) cpu_start: Project name:     test[0m
+[0;32mI (204) cpu_start: App version:      1[0m
+[0;32mI (208) cpu_start: Compile time:     Jan 23 2025 03:09:00[0m
+[0;32mI (214) cpu_start: ELF file SHA256:  1ce5b34bb...[0m
+[0;32mI (220) cpu_start: ESP-IDF:          v5.2[0m
+[0;32mI (224) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (229) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (234) cpu_start: Chip rev:         v1.1[0m
+[0;32mI (239) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (246) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (252) heap_init: At 3FFB2AD8 len 0002D528 (181 KiB): DRAM[0m
+[0;32mI (258) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (264) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (271) heap_init: At 4008C71C len 000138E4 (78 KiB): IRAM[0m
+[0;32mI (279) spi_flash: detected chip: generic[0m
+[0;32mI (282) spi_flash: flash io: dio[0m
+[0;33mW (286) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (299) main_task: Started on CPU0[0m
+[0;32mI (309) main_task: Calling app_main()[0m
+[0;32mI (309) task2: take semaphore[0m
+[0;32mI (309) count_dec: count:1[0m
+[0;32mI (309) main_task: Returned from app_main()[0m
+[0;32mI (309) count_inc: count:2[0m
+[0;32mI (1309) count_dec: count:0[0m
+[0;32mI (1309) task2: take semaphore[0m
+[0;32mI (1319) count_inc: count:2[0m
+[0;32mI (2309) count_dec: count:1[0m
+[0;32mI (2309) task2: take semaphore[0m
+[0;32mI (2319) count_inc: count:3[0m
+[0;32mI (3309) count_dec: count:2[0m
+[0;32mI (3309) task2: take semaphore[0m
+[0;32mI (3319) count_inc: count:4[0m
+[0;32mI (4309) count_dec: count:3[0m
+[0;32mI (4309) task2: take semaphore[0m
+[0;32mI (4319) count_inc: count:5[0m
+[0;32mI (5309) count_dec: count:4[0m
+[0;32mI (5309) task2: take semaphore[0m
+[0;32mI (5319) count_inc: count:6[0m
+[0;32mI (6309) count_dec: count:5[0m
+[0;32mI (6309) task2: take semaphore[0m
+[0;32mI (6319) count_inc: count:7[0m
+[0;32mI (7309) count_dec: count:6[0m
+[0;32mI (7309) task2: take semaphore[0m
+[0;32mI (7319) count_inc: count:8[0m
+[0;32mI (8309) count_dec: count:7[0m
+[0;32mI (8309) task2: take semaphore[0m
+[0;32mI (8319) count_inc: count:9[0m
+[0;32mI (9309) count_dec: count:8[0m
+[0;32mI (9309) task2: take semaphore[0m
+[0;32mI (9319) count_inc: count:10[0m
+[0;32mI (10309) count_dec: count:9[0m
+[0;32mI (10309) task2: take semaphore[0m
+[0;32mI (10319) count_inc: count:11[0m
+[0;32mI (11309) count_dec: count:10[0m
+[0;32mI (11309) task2: take semaphore[0m
+[0;32mI (11319) count_inc: count:12[0m
+[0;32mI (12309) count_dec: count:11[0m
+[0;32mI (12309) task2: take semaphore[0m
+[0;32mI (12319) count_inc: count:13[0m
+[0;32mI (13309) count_dec: count:12[0m
+[0;32mI (13309) task2: take semaphore[0m
+[0;32mI (13319) count_inc: count:14[0m
+[0;32mI (14309) count_dec: count:13[0m
+[0;32mI (14309) task2: take semaphore[0m
+[0;32mI (14319) count_inc: count:15[0m
+[0;32mI (15309) count_dec: count:14[0m
+[0;32mI (15309) task2: take semaphore[0m
+[0;32mI (15319) count_inc: count:16[0m
+[0;32mI (16309) count_dec: count:15[0m
+[0;32mI (16309) task2: take semaphore[0m
+[0;32mI (16319) count_inc: count:17[0m
+[0;32mI (17309) count_dec: count:16[0m
+[0;32mI (17309) task2: take semaphore[0m
+[0;32mI (17319) count_inc: count:18[0m
+[0;32mI (18309) count_dec: count:17[0m
+[0;32mI (18309) task2: take semaphore[0m
+[0;32mI (18319) count_inc: count:19[0m
+[0;32mI (19309) count_dec: count:18[0m
+[0;32mI (19309) task2: take semaphore[0m
+[0;32mI (19319) count_inc: count:20[0m
+[0;32mI (20309) count_dec: count:19[0m
+[0;32mI (20309) task2: take semaphore[0m
+[0;32mI (20319) count_inc: count:21[0m
+[0;32mI (21309) count_dec: count:20[0m
+[0;32mI (21309) task2: take semaphore[0m
+[0;32mI (21319) count_inc: count:22[0m
+[0;32mI (22309) count_dec: count:21[0m
+[0;32mI (22309) task2: take semaphore[0m
+[0;32mI (22319) count_inc: count:23[0m
+[0;32mI (23309) count_dec: count:22[0m
+[0;32mI (23309) task2: take semaphore[0m
+[0;32mI (23319) count_inc: count:24[0m
+[0;32mI (24309) count_dec: count:23[0m
+[0;32mI (24309) task2: take semaphore[0m
+[0;32mI (24319) count_inc: count:25[0m
+[0;32mI (25309) count_dec: count:24[0m
+[0;32mI (25309) task2: take semaphore[0m
+[0;32mI (25319) count_inc: count:26[0m
+[0;32mI (26309) count_dec: count:25[0m
+[0;32mI (26309) task2: take semaphore[0m
+[0;32mI (26319) count_inc: count:27[0m
+[0;32mI (27309) count_dec: count:26[0m
+[0;32mI (27309) task2: take semaphore[0m
+[0;32mI (27319) count_inc: count:28[0m
+[0;32mI (28309) count_dec: count:27[0m
+[0;32mI (28309) task2: take semaphore[0m
+[0;32mI (28319) count_inc: count:29[0m
+[0;32mI (29309) count_dec: count:28[0m
+[0;32mI (29309) task2: take semaphore[0m
+[0;32mI (29319) count_inc: count:30[0m
+[0;32mI (30309) count_dec: count:29[0m
+[0;32mI (30309) task2: take semaphore[0m
+[0;32mI (30319) count_inc: count:31[0m
+[0;32mI (31309) count_dec: count:30[0m
+[0;32mI (31309) task2: take semaphore[0m
+[0;32mI (31319) count_inc: count:32[0m
