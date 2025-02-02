@@ -225,3 +225,189 @@ void task4(void *pvParameters) {
    - 优先考虑用于一对一的任务通信
    - 注意通知值的覆盖问题
    - 跨核心通信时要考虑同步开销
+
+## 9. ESP32项目模块化实践
+### 模块化的意义
+1. 代码组织更清晰
+   - 每个功能模块独立封装
+   - 降低代码耦合度
+   - 提高代码可维护性
+   - 便于团队协作开发
+
+2. 代码复用性更好
+   - 模块可以在不同项目中重复使用
+   - 避免代码重复编写
+   - 降低维护成本
+
+3. 更易于测试和调试
+   - 可以独立测试每个模块
+   - 问题定位更准确
+   - 修改影响范围可控
+
+### 项目结构组织
+```
+project/
+├── CMakeLists.txt              # 项目主CMake文件
+├── main/                       # 主程序目录
+│   ├── CMakeLists.txt         # 主程序CMake文件
+│   └── test.c                 # 主程序源文件
+└── components/                 # 组件目录
+    ├── uart_handler/          # UART处理组件
+    │   ├── CMakeLists.txt     # 组件CMake文件
+    │   ├── include/           # 头文件目录
+    │   │   └── uart_handler.h
+    │   └── src/              # 源文件目录
+    │       └── uart_handler.c
+    ├── tcp_server/           # TCP服务器组件
+    │   ├── CMakeLists.txt
+    │   ├── include/
+    │   │   └── tcp_server.h
+    │   └── src/
+    │       └── tcp_server.c
+    └── wifi_link/            # WiFi连接组件
+        ├── CMakeLists.txt
+        ├── include/
+        │   └── wifi_link.h
+        └── src/
+            └── wifi_link.c
+```
+
+### 组件开发规范
+1. 组件目录结构
+   ```
+   component_name/
+   ├── CMakeLists.txt    # 组件构建文件
+   ├── include/          # 公共头文件目录
+   │   └── *.h          # 对外接口头文件
+   └── src/             # 源文件目录
+       └── *.c          # 实现文件
+   ```
+
+2. CMakeLists.txt配置
+   ```cmake
+   idf_component_register(
+       SRCS "src/component_name.c"     # 源文件
+       INCLUDE_DIRS "include"          # 头文件目录
+       REQUIRES other_component        # 依赖的其他组件
+   )
+   ```
+
+3. 头文件规范
+   ```c
+   #ifndef COMPONENT_NAME_H
+   #define COMPONENT_NAME_H
+
+   // 包含必要的头文件
+   #include <...>
+
+   // 常量和宏定义
+   #define CONST_NAME value
+
+   // 函数声明
+   /**
+    * @brief 函数功能简述
+    * @param param 参数说明
+    * @return 返回值说明
+    */
+   return_type function_name(params);
+
+   #endif // COMPONENT_NAME_H
+   ```
+
+### 实际案例：TCP服务器项目模块化
+1. UART处理模块（uart_handler）
+   ```c
+   // uart_handler.h
+   void uart_init(void);
+   int uart_send_data(const char* data, size_t len);
+   int uart_receive_data(char* data, size_t max_len);
+   ```
+   - 负责UART通信初始化
+   - 提供数据发送和接收接口
+   - 封装了UART配置参数
+
+2. TCP服务器模块（tcp_server）
+   ```c
+   // tcp_server.h
+   void tcp_server_task(void *pvParameters);
+   esp_err_t start_tcp_server(void);
+   ```
+   - 处理TCP服务器功能
+   - 管理客户端连接
+   - 实现命令解析和处理
+
+3. WiFi连接模块（wifi_link）
+   ```c
+   // wifi_link.h
+   esp_err_t wifi_init_sta(const char *ssid, const char *password);
+   bool wifi_is_connected(void);
+   esp_err_t wifi_get_ip_string(char *ip_str, size_t max_len);
+   ```
+   - 管理WiFi连接
+   - 提供连接状态查询
+   - 处理IP地址获取
+
+4. 主程序精简化
+   ```c
+   void app_main(void)
+   {
+       // 初始化NVS
+       esp_err_t ret = nvs_flash_init();
+       // ...
+
+       // 初始化WiFi
+       ESP_ERROR_CHECK(wifi_init_sta(WIFI_SSID, WIFI_PASS));
+
+       // 初始化UART
+       uart_init();
+
+       // 启动TCP服务器
+       ESP_ERROR_CHECK(start_tcp_server());
+
+       // 主循环
+       while (1) {
+           // 处理UART数据
+           // ...
+       }
+   }
+   ```
+
+### 依赖关系管理
+1. 组件间依赖
+   - tcp_server依赖uart_handler
+   - 所有组件依赖esp_common
+   - 主程序依赖所有自定义组件
+
+2. CMake配置示例
+   ```cmake
+   # uart_handler/CMakeLists.txt
+   idf_component_register(
+       SRCS "src/uart_handler.c"
+       INCLUDE_DIRS "include"
+       REQUIRES driver esp_common
+   )
+
+   # tcp_server/CMakeLists.txt
+   idf_component_register(
+       SRCS "src/tcp_server.c"
+       INCLUDE_DIRS "include"
+       REQUIRES lwip uart_handler freertos esp_common
+   )
+   ```
+
+### 注意事项
+1. 组件设计原则
+   - 功能单一性：每个组件只负责一个核心功能
+   - 接口简洁性：对外接口要简单清晰
+   - 依赖最小化：尽量减少组件间的依赖
+
+2. 常见问题处理
+   - 头文件找不到：检查CMakeLists.txt中的INCLUDE_DIRS配置
+   - 链接错误：检查REQUIRES中的组件依赖
+   - 符号重定义：检查头文件保护宏
+
+3. 开发建议
+   - 先设计后实现：先规划好组件接口再开发
+   - 渐进式重构：逐步将功能模块化，而不是一次性重构
+   - 保持向后兼容：修改接口时考虑兼容性
+   - 编写文档：及时更新组件使用说明
