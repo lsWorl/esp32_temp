@@ -3,3 +3,6 @@ build/
 
 #忽略 .vscode 文件
 .vscode
+
+# MQTT配置文件（包含敏感信息）
+components/mqtt_ali/include/mqtt_config.h

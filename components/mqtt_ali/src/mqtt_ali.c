@@ -62,6 +62,7 @@ esp_err_t mqtt_ali_init(void)
         .credentials.client_id = MQTT_CLIENT_ID,
         .credentials.username = MQTT_USERNAME,
         .credentials.authentication.password = MQTT_PASSWORD,
+        .broker.verification.certificate = MQTT_SERVER_ROOT_CERT,
     };
 
     // 创建MQTT客户端
