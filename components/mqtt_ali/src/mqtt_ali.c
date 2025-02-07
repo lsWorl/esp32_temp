@@ -35,11 +35,59 @@ void mqtt_event_handler(void *handler_args, esp_event_base_t base, int32_t event
 
     case MQTT_EVENT_DATA:
         ESP_LOGI(TAG, "MQTT_EVENT_DATA");
-        //接收订阅到的数据
         printf("TOPIC=%.*s\r\n", event->topic_len, event->topic);
         printf("DATA=%.*s\r\n", event->data_len, event->data);
-        //将订阅到的数据通过uart发送到stm32
-        uart_send_data(event->data, event->data_len);
+
+        // 解析JSON数据
+        if (event->data_len > 0 && event->data != NULL) {
+            // 确保数据以null结尾
+            char *data_str = malloc(event->data_len + 1);
+            if (data_str) {
+                memcpy(data_str, event->data, event->data_len);
+                data_str[event->data_len] = '\0';
+
+                cJSON *root = cJSON_Parse(data_str);
+                if (root) {
+                    // 构建格式化的输出字符串
+                    char output[256] = {0};
+                    int offset = 0;
+
+                    // 添加帧头
+                    output[offset++] = 0xAA;
+
+                    // 遍历JSON对象的所有键值对
+                    cJSON *item = root->child;
+                    while (item) {
+                        if (cJSON_IsNumber(item)) {
+                            // 格式化浮点数，保留两位小数
+                            offset += snprintf(output + offset, sizeof(output) - offset,
+                                            "%s:%.2f;", 
+                                            item->string, 
+                                            item->valuedouble);
+                        }
+                        item = item->next;
+                    }
+
+                    // 添加帧尾
+                    output[offset++] = 0x55;
+
+                    // 通过串口发送格式化后的数据
+                    if (offset > 0) {
+                        int sent = uart_send_data(output, offset);
+                        if (sent > 0) {
+                            ESP_LOGI(TAG, "success send UART %d byte", sent);
+                        } else {
+                            ESP_LOGE(TAG, "UART failed");
+                        }
+                    }
+
+                    cJSON_Delete(root);
+                } else {
+                    ESP_LOGE(TAG, "JSON failed");
+                }
+                free(data_str);
+            }
+        }
         break;
 
     case MQTT_EVENT_ERROR:
@@ -124,8 +172,6 @@ esp_err_t mqtt_ali_subscribe(char *topic, int qos)
     ESP_LOGI(TAG, "Subscribed to topic %s, msg_id=%d", topic, msg_id);
     return ESP_OK;
 }
-
-
 
 bool mqtt_ali_is_connected(void)
 {

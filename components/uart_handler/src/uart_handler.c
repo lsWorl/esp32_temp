@@ -43,7 +43,7 @@ int uart_receive_data(char* data, size_t max_len)
         return -1;
     }
     
-    int len = uart_read_bytes(UART_NUM, (uint8_t*)data, max_len, 1000);
+    int len = uart_read_bytes(UART_NUM, (uint8_t*)data, max_len, 0);
     if (len > 0) {
         ESP_LOGI(TAG, "Received %d bytes", len);
     }

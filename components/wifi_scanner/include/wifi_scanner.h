@@ -8,7 +8,7 @@
 
 // 扫描配置
 #define MAX_AP_NUM 20                  // 最大AP数量
-#define SCAN_INTERVAL_MS 30000         // 扫描间隔(ms)
+#define SCAN_INTERVAL_MS 600000         // 扫描间隔(ms) 10分钟
 #define WIFI_SCAN_TOPIC "esp32/wifi"   // MQTT主题
 
 /**

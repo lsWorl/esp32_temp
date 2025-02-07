@@ -6,6 +6,7 @@
 #include "mqtt_client.h"
 #include "esp_tls.h"
 #include <string.h>
+#include "cJSON.h"
 
 // °üº¬ÅäÖÃÎÄ¼ş
 #include "mqtt_config.h"
