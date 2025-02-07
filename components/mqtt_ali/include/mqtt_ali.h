@@ -1,6 +1,7 @@
 #ifndef MQTT_ALI_H
 #define MQTT_ALI_H
 
+#include "uart_handler.h"
 #include "esp_log.h"
 #include "mqtt_client.h"
 #include "esp_tls.h"
@@ -33,9 +34,18 @@ esp_err_t mqtt_ali_init(void);
 esp_err_t mqtt_ali_publish(const char *data, size_t len);
 
 /**
+ * @brief 订阅MQTT发来的数据
+ * @param topic 主题
+ * @param qos 服务质量
+ * @return ESP_OK 成功，其他值表示失败
+ */
+esp_err_t mqtt_ali_subscribe(char*topic,int qos);
+
+/**
  * @brief 检查MQTT连接状态
  * @return true 已连接，false 未连接
  */
 bool mqtt_ali_is_connected(void);
+
 
 #endif // MQTT_ALI_H

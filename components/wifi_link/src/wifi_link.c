@@ -29,12 +29,6 @@ static void event_handler(void* arg, esp_event_base_t event_base,
 
 esp_err_t wifi_init_sta(const char *ssid, const char *password)
 {
-    esp_err_t ret = nvs_flash_init();
-    if (ret == ESP_ERR_NVS_NO_FREE_PAGES || ret == ESP_ERR_NVS_NEW_VERSION_FOUND) {
-        ESP_ERROR_CHECK(nvs_flash_erase());
-        ret = nvs_flash_init();
-    }
-    ESP_ERROR_CHECK(ret);
 
     ESP_ERROR_CHECK(esp_netif_init());
     ESP_ERROR_CHECK(esp_event_loop_create_default());
@@ -74,6 +68,7 @@ bool wifi_is_connected(void)
 
 esp_err_t wifi_get_ip_string(char *ip_str, size_t max_len)
 {
+    //判断缓冲区等相关参数，若不符标准返回非法参数错误
     if (!s_sta_netif || !ip_str || max_len == 0) {
         return ESP_ERR_INVALID_ARG;
     }
@@ -83,7 +78,7 @@ esp_err_t wifi_get_ip_string(char *ip_str, size_t max_len)
     if (ret != ESP_OK) {
         return ret;
     }
-
+    //将 ip_info.ip（esp_ip4_addr_t 类型）转换为字符串格式后存入ip_str，IPSTR是对应格式
     snprintf(ip_str, max_len, IPSTR, IP2STR(&ip_info.ip));
     return ESP_OK;
 }

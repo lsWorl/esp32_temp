@@ -48,6 +48,10 @@ void app_main(void)
     }
     ESP_LOGI(TAG, "MQTT connected to EMQX");
 
+    // 订阅MQTT主题
+    const char *subscribe_topic = "data/#";
+    ESP_ERROR_CHECK(mqtt_ali_subscribe(subscribe_topic, 1));  // 使用QoS 1
+
     // 初始化UART
     uart_init();
 

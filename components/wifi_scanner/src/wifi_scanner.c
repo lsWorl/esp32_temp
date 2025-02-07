@@ -35,7 +35,7 @@ static char* wifi_scan_to_json(wifi_ap_record_t *ap_records, uint16_t ap_count) 
     }
     
     cJSON_AddItemToObject(root, "ap_list", ap_list);
-    
+    //不格式化转换为字符串
     char *json_str = cJSON_PrintUnformatted(root);
     cJSON_Delete(root);
     
